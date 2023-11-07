@@ -1,0 +1,262 @@
+<body class="bg-5 inter-font" id="body" theme-dicender=>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 border-end border-3 bc-2 d-flex flex-column" style="min-height: 100vh;">
+                <a class="icon-link icon-link-hover my-5 align-image" href="/home">
+                    <i class="bi bi-arrow-left fs-3" style="margin-bottom: 28px;" aria-hidden="true"></i>
+                    <p class="fs-4 fw-600">Voltar ao menu principal</p>
+                </a>
+                <hr class="border-top border-3 bc-2 opacity-100 w-100">
+                <ul class="config-list d-flex flex-column justify-content-between" id="listBtnConfig">
+                    <li class="config-item" id="suaConta" data-bs-toggle="collapse" data-bs-target="#suaContaList"
+                        role="button" aria-expanded="false" aria-controls="suaContaList">
+                        <i class="bi-person"></i>
+                        <p class="m-0 fw-500">Sua conta</p>
+                        <i class="bi-chevron-down float-end me-4"></i>
+                    </li>
+                    <ul class="config-list-internal collapse" id="suaContaList" style="z-index: 999;">
+                        <li class="config-item-internal" id="infoConta">
+                            <i class="bi-person-circle"></i>
+                            <p class="m-0 fw-500">Informações da conta</p>
+                            <i class="bi-chevron-right float-end me-4"></i>
+                        </li>
+                        <li class="config-item-internal" id="atividades">
+                            <i class="bi-bar-chart"></i>
+                            <p class="m-0 fw-500">Sua atividade</p>
+                            <i class="bi-chevron-right float-end me-4"></i>
+                        </li>
+                    </ul>
+                    <li class="config-item" id="segPriv" data-bs-toggle="collapse" data-bs-target="#segPrivList"
+                        role="button" aria-expanded="false" aria-controls="SegPrivList">
+                        <i class="bi-shield"></i>
+                        <p class="m-0 fw-500">Segurança e privacidade</p>
+                        <i class="bi-chevron-down float-end me-4"></i>
+                    </li>
+                    <ul class="config-list-internal collapse" id="segPrivList" style="z-index: 999;">
+                        <li class="config-item-internal" id="sessoes">
+                            <i class="bi-phone"></i>
+                            <p class="m-0 fw-500">Sessões</p>
+                            <i class="bi-chevron-right float-end me-4"></i>
+                        </li>
+                        <li class="config-item-internal" id="bloqueados">
+                            <i class="bi-person-slash"></i>
+                            <p class="m-0 fw-500">Bloqueados e silenciados</p>
+                            <i class="bi-chevron-right float-end me-4"></i>
+                        </li>
+                    </ul>
+                    <li class="config-item" id="personaliza" data-bs-toggle="collapse" data-bs-target="#personaList"
+                        role="button" aria-expanded="false" aria-controls="personaList">
+                        <i class="bi-brush"></i>
+                        <p class="m-0 fw-500">Personalização</p>
+                        <i class="bi-chevron-down float-end me-4"></i>
+                    </li>
+                    <ul class="config-list-internal collapse" id="personaList" style="z-index: 999;">
+                        <li class="config-item-internal" id="temas">
+                            <i class="bi-palette"></i>
+                            <p class="m-0 fw-500">Temas</p>
+                            <i class="bi-chevron-right float-end me-4"></i>
+                        </li>
+                        <li class="config-item-internal" id="acessibilidade">
+                            <i class="bi-universal-access-circle"></i>
+                            <p class="m-0 fw-500">Acessibilidade</p>
+                            <i class="bi-chevron-right float-end me-4"></i>
+                        </li>
+                    </ul>
+                    <li class="config-item" id="loja">
+                        <i class="bi-bag"></i>
+                        <p class="m-0 fw-500">Loja de itens</p>
+                        <i class="bi-chevron-down float-end me-4"></i>
+                    </li>
+                    <li class="config-item" id="outros" data-bs-toggle="collapse" data-bs-target="#outrosList"
+                        role="button" aria-expanded="false" aria-controls="outrosList">
+                        <i class="bi-three-dots"></i>
+                        <p class="m-0 fw-500">Outros</p>
+                        <i class="bi-chevron-down float-end me-4"></i>
+                    </li>
+                    <ul class="config-list-internal collapse" id="outrosList" style="z-index: 999;">
+                        <li class="config-item-internal" id="termos">
+                            <i class="bi-file-earmark-person"></i>
+                            <p class="m-0 fw-500">Termos</p>
+                            <i class="bi-chevron-right float-end me-4"></i>
+                        </li>
+                        <li class="config-item-internal" id="politPriv">
+                            <i class="bi-person-lines-fill"></i>
+                            <p class="m-0 fw-500">Política de privacidade</p>
+                            <i class="bi-chevron-right float-end me-4"></i>
+                        </li>
+                        <li class="config-item-internal" id="sobre">
+                            <i class="bi-journal-text"></i>
+                            <p class="m-0 fw-500">Sobre</p>
+                            <i class="bi-chevron-right float-end me-4"></i>
+                        </li>
+                        <li class="config-item-internal" id="contato">
+                            <i class="bi-headset"></i>
+                            <p class="m-0 fw-500">Contato</p>
+                            <i class="bi-chevron-right float-end me-4"></i>
+                        </li>
+                        <li class="config-item-internal" id="centralAjuda">
+                            <i class="bi-info-circle"></i>
+                            <p class="m-0 fw-500">Central de ajuda</p>
+                            <i class="bi-chevron-right float-end me-4"></i>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-md-7 bg-config">
+                <div id="infoContaPage" class="d-none">
+                    <div class="container-fluid">
+                        <div class="my-4">
+                            <img src="/img/icon-glass.png" class="logo ms-3" alt="Logotipo Dicenders">
+                            <h3 class="fw-600 list-inline-item float-end mt-4 me-5 align-middle text-2">Informações da conta</h3>
+                        </div>
+                        <div class="position-relative">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="w-100 start-50 translate-middle-x position-relative rounded-circle cadastro-image">
+                                        <img style="width: 100%; height: 100%; object-fit: cover;" class="position-absolute" src="{{avatar}}" alt="Imagem de perfil do usuário">
+                                    </div>
+                                </div>
+                                <div class="col-md-8 d-flex flex-column-reverse">
+                                <div class="parent mb-1">
+                                    <input type="text" minlength="4" maxlength="15" class="form-control bg-glass text-2 bs-0" id="reg_usertag" name="usertag" autocomplete="off" aria-describedby="emailHelp" placeholder="{{usertag}}" style="padding-left: 2rem;">
+                                    <i class="bi-at fs-5" id="at"></i>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" minlength="4" maxlength="30" class="form-control bg-glass text-2 bs-0" id="reg_username" name="username" autocomplete="off" aria-describedby="emailHelp" placeholder="{{username}}">
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="border-top border-3 bc-3 opacity-100 mt-4">
+                        <h3 class="text-2 text-center fw-600 mt-2 mb-0">Cuidado com as informações abaixo!</h3>
+                        <p class="text-center fw-300 text-clean">O vazamento dos dados seguintes podem ocasionar em transtornos futuros.</p>
+                        <div>
+                            <div class="mb-3 d-flex justify-content-between">
+                                <input type="email" class="form-control w-50 bg-glass bg-config text-2 bs-0" id="reg_username" name="username" autocomplete="off" aria-describedby="emailHelp" placeholder="email@exemplo.com">
+                                <button class="btn btn-glass">Mudar senha <i class="bi-lock-fill"></i></button>
+                            </div>
+                        </div>
+                        <hr class="border-top border-3 bc-3 opacity-100 mt-4">
+                        <h3 class="text-2 text-center fw-600 mt-2 mb-0">Mantenha sua conta mais segura!</h3>
+                        <p class="text-center fw-300 text-clean">Ative a verificação de duas etapas para diminuir as chances de invasores.</p>
+                        <div>
+                            <div class="mb-3 d-flex justify-content-center">
+                                <button class="btn btn-glass">Ativar verificação de duas etapas <i class="bi-shield-fill"></i></button>
+                            </div>
+                        </div>
+                        <hr class="border-top border-3 bc-3 opacity-100 mt-4">
+                        <p class="text-center fw-300 text-clean">Lembre-se que as opções abaixo podem ser definitivas e irrevogáveis!</p>
+                        <div class="d-flex justify-content-around">
+                            <button class="btn btn-glass-danger">Suspender conta</button>
+                            <button class="btn btn-glass-delete">Excluir conta</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="temasPage" class="d-none">
+                    <div class="container-fluid">
+                        <div class="my-4">
+                            <img src="/img/icon-glass.png" class="logo ms-3" alt="Logotipo Dicenders">
+                            <h3 class="fw-600 list-inline-item float-end mt-4 me-5 align-middle text-2">Temas</h3>
+                        </div>
+                        <object class="frame-config border border-4 bc-2 align-center" id="objectshow" type="text/html" data="/configpages/menutest.html"></object>
+                        <p class="fw-200 text-center">Esta é uma representação do tema escolhido aplicado ao conteúdo. Lindo, né?</p>
+                        <hr class="border-top border-3 bc-3 opacity-100 mt-4">
+                        <p class="text-center fw-400 mt-3">Escolha novos temas para ativar:</p>
+                        <div class="container-fluid colorlist-config" id="colorList">
+                            <a id="default" onclick="document.getElementById('objectshow').setAttribute('data', '/configpages/menutest.html')">
+                                <button class="switch-color-config" id="defaultcolor">
+                                    <img src="../img/001.svg" class="switch-img-config" alt="Logotipo Dicenders para escolha do tema padrão">
+                                </button>
+                            </a>
+                            <a id="coloryellow" onclick="document.getElementById('objectshow').setAttribute('data', '/configpages/menutest.html')">
+                                <button class="switch-color-config" id="yellow">
+                                    <img src="../img/001yellow.svg" class="switch-img-config" alt="Logotipo Dicenders para escolha do tema amarelo">
+                                </button>
+                            </a>
+                            <a id="colorgreen" onclick="document.getElementById('objectshow').setAttribute('data', '/configpages/menutest.html')">
+                                <button class="switch-color-config" id="green">
+                                    <img src="../img/001green.svg" class="switch-img-config" alt="Logotipo Dicenders para escolha do tema verde">
+                                </button>
+                            </a>
+                            <a id="colorred" onclick="document.getElementById('objectshow').setAttribute('data', '/configpages/menutest.html')">
+                                <button class="switch-color-config" id="red">
+                                    <img src="../img/001red.svg" class="switch-img-config" alt="Logotipo Dicenders para escolha do tema vermelho">
+                                </button>
+                            </a>
+                            <a id="colorblack" onclick="document.getElementById('objectshow').setAttribute('data', '/configpages/menutest.html')">
+                                <button class="switch-color-config" id="black">
+                                    <img src="../img/001black.svg" class="switch-img-config" alt="Logotipo Dicenders para escolha do tema preto">
+                                </button>
+                            </a>
+                            <a id="colorwhite" onclick="document.getElementById('objectshow').setAttribute('data', '/configpages/menutest.html')">
+                                <button class="switch-color-config" id="white">
+                                    <img src="../img/001white.svg" class="switch-img-config" alt="Logotipo Dicenders para escolha do tema branco">
+                                </button>
+                            </a>
+                            <a id="blueyellow" onclick="document.getElementById('objectshow').setAttribute('data', '/configpages/menutest.html')">
+                                <button class="switch-color-config" id="blueNyellow">
+                                    <img src="../img/001bny.svg" class="switch-img-config" alt="Logotipo Dicenders para escolha do tema gradiente azul-amarelo">
+                                </button>
+                            </a>
+                            <a id="purpleyellow" onclick="document.getElementById('objectshow').setAttribute('data', '/configpages/menutest.html')">
+                                <button class="switch-color-config" id="purpNyellow">
+                                    <img src="../img/001pny.svg" class="switch-img-config" alt="Logotipo Dicenders para escolha do tema gradiente roxo-amarelo">
+                                </button>
+                            </a>
+                            <a id="milesgradient" onclick="document.getElementById('objectshow').setAttribute('data', '/configpages/menutest.html')">
+                                <button class="switch-color-config" id="blackspider">
+                                    <img src="../img/001miles.svg" class="switch-img-config" alt="Logotipo Dicenders para escolha do tema gradiente preto-amarelo">
+                                </button>
+                            </a>
+                            <a id="coffeetheme" onclick="document.getElementById('objectshow').setAttribute('data', '/configpages/menutest.html')">
+                                <button class="switch-color-config" id="coffee">
+                                    <img src="../img/001coffee.svg" class="switch-img-config" alt="Logotipo Dicenders para escolha do tema marrom">
+                                </button>
+                            </a>
+                        </div>
+                        <hr class="border-top border-3 bc-3 opacity-100 mt-4">
+                        <p class="text-center">Cansados de usar os mesmos temas? Adquira novos na <a href="" class="text-2">loja de itens</a>.</p>
+                        <div class="container-fluid">
+                            <p class="text-center fw-500 text-post mb-0">As ofertas serão renovadas em:</p>
+                            <h1 class="text-2 text-center fw-800 clock-size" id="clock">10:49h</h1>
+                        </div>
+                    </div>
+                </div>
+                <div id="acessibilidadePage" class="d-none">
+                    <div class="container-fluid">
+                        <div class="my-4">
+                            <img src="/img/icon-glass.png" class="logo ms-3" alt="Logotipo Dicenders">
+                            <h3 class="fw-600 list-inline-item float-end mt-4 me-5 align-middle text-2">Acessibilidade</h3>
+                        </div>
+                        <p class="fw-200 text-center">Algumas opções de acessibilidade. Eu sei, não é a página mais bonita.</p>
+                        <hr class="border-top border-3 bc-3 opacity-100 mt-4">
+                        <p class="text-center fw-400 mt-3">Sinta-se à vontade para customizar seu layout como preferir.</p>
+                        <div class="position-relative d-flex justify-content-around">
+                            <button class="btn btn-glass" onclick="switchcontraste(); window.location.reload()">Alternar alto-contraste</button>
+                            <button class="btn btn-glass" onclick="switchlibras(); window.location.reload()">Alternar Vlibras</button>
+                        </div>
+                        <hr class="border-top border-3 bc-3 opacity-100 mt-4">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</body>
+<script>
+    function switchcontraste() {
+        if (localStorage.getItem("altocontrasteativo") == "altocontrast") {
+            localStorage.setItem('altocontrasteativo', 'default');
+        } else {
+            localStorage.setItem('altocontrasteativo', 'altocontrast');
+        }
+    }
+
+    function switchlibras() {
+        if (localStorage.getItem("vlibras") == "disabled") {
+            localStorage.setItem('vlibras', 'enabled');
+        } else {
+            localStorage.setItem('vlibras', 'disabled');
+        }
+    }
+</script>

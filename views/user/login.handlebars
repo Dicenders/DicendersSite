@@ -1,0 +1,57 @@
+<body class="bg-4 bg-image inter-font" theme-dicender=default>
+    <a onclick="history.back()" class="text-2"><i class="bi-arrow-left ms-3" style="font-size: xx-large;"></i></a>
+    <div class="container">
+            <div class="position-absolute top-50 start-50 translate-middle" style="width: 30%;">
+                <div class="card bg-glass text-2 mb-3 text-center" >
+                    <div class="card-body">
+                        <h1 class="mb-5 login oswald-font fw-400">Login</h1>
+                        <form action="/login/val" method="POST">
+                            <div class="mb-3 parent">
+                            <input type="text" name="usertag" class="form-control bg-glass text-2 bs-0" id="InputEmail1" aria-describedby="emailHelp" placeholder="Nome de usuário"  style="padding-left: 2rem;">
+                            <i class="bi-at fs-5" id="at"></i>
+                            </div>
+                            <div class="mb-3 parent">
+                            <input type="password" id="reg_password" name="senha" class="form-control bg-glass text-2 bs-0" id="InputPassword1" placeholder="Senha">
+                            <i class="bi-eye-slash" name="eye"  id="eye" onclick="viewReg()">
+                            </i>
+                            </div>
+                            <div>
+                                <p id="textError" class="mt-2 text-center"></p> 
+                            </div>
+                            <div class="mb-2 form-check text-start">
+                            <input type="checkbox" class="form-check-input bs-0" id="checkbox">
+                            <label class="form-check-label" for="exampleCheck1">Lembre-se de mim</label>
+                            </div>
+                            <div class="svg-a" name="twittericon">
+                                <a href=""><i class="fa-brands fa-x-twitter" style="font-size: xx-large;"></i></a>
+                            </div>
+                            <div class="svg-a" name="googleicon">
+                                <a href=""><i class="fa-brands fa-google" style="font-size: xx-large;"></i></a>
+                            </div>
+                            <div class=" mb-3">
+                            <input type="submit" name="submit" class="btn btn-primary btn-glass w-100" value="Sign in"></button>
+                            </div>
+                            <div class="mt-2 mb-2">
+                                <p class="fs-6 text-light">Não tem uma conta? <a href="/cadastro" class="text-2">Cadastre-se</a></p>
+                            </div>
+                            <div class="mb-0">
+                                <a href="#" class="text-2 fs-foot">Termos de uso</a>
+                                <a href="#" class="text-2 fs-foot">Privacidade</a>
+                                <a href="#" class="text-2 fs-foot">Fale conosco</a>
+                            </div>
+                        </form>
+                    </div>
+                  </div>
+            </div>
+    </div>
+</body>
+<script>
+
+    const err = {{errStatus}}
+
+    if(err == 303){
+        document.getElementById('textError').classList.add("text-danger");
+        document.getElementById('textError').innerHTML = "Email ou senha inválidos.";
+        document.getElementById('InputEmail1').focus();
+    }
+</script>

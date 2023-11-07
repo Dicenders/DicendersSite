@@ -1,0 +1,85 @@
+<body class="bg-4 bg-image inter-font" onload="" theme-dicender="">
+    <a onclick="history.back()" class="text-2"><i class="bi-arrow-left ms-3" style="font-size: xx-large;"></i></a>
+    <div class="container">
+            <div class="position-absolute top-50 start-50 translate-middle" style="width: 30%;">
+                <div class="card bg-glass text-2 mb-3 text-center">
+                    <div class="card-body">
+                        <h1 class="mb-5 login oswald-font fw-400">Cadastro</h1>
+                        <form action="/cadastro/new" id="form-cadastro" method='POST' autocomplete="off">
+                            <div class="mb-3">
+                                <input type="email" class="form-control bg-glass text-2 bs-0" id="reg_email" name="email" autocomplete="off" aria-describedby="emailHelp" aria-label="email input" placeholder="Email">
+                                <p id="textEmail" class="mt-2"></p>
+                                </div>
+                                <div class="parent">
+                                <input type="password" class="form-control bg-glass text-2 bs-0 input-lg" id="reg_password" name="reg_password" autocomplete="off" ng-model="register_password" aria-label="password input" onkeyup="checkstrength()" placeholder="Senha" style="padding-right: 2rem;">
+                                <i class="bi-eye-slash" name="eye"  id="eye" onclick="viewReg()">
+                                </i>
+                            </div>
+                            <div class="position-relative start-progressbar" id="progressBar">
+                            </div>
+                            <div>
+                                <p id="textSenha" class="mt-2 text-center"></p> 
+                            </div>
+                            <div class="mb-3 parent">
+                                <input type="password" class="form-control bg-glass text-2 bs-0 input-lg" id="conf_password" name="conf_password" autocomplete="off" aria-label="Confirm password input" ng-model="confirm_password" placeholder="Confirmar senha" style="padding-right: 2rem;">
+                                <i class="bi-eye-slash" name="confirm_eye"  id="confirm_eye" onclick="viewConf()">
+                                </i>
+                            </div>
+                            <div>
+                                <p id="textConfirmSenha" class="mt-2 text-center"></p> 
+                            </div>
+                            <div class="svg-a" name="twittericon">
+                                <a href=""><i class="fa-brands fa-x-twitter" style="font-size: xx-large;"></i></a>
+                            </div>
+                            <div class="svg-a" name="googleicon">
+                                <a href=""><i class="fa-brands fa-google" style="font-size: xx-large;"></i></a>
+                            </div>
+                            <div class=" mb-3">
+                            <a onclick="" href="cadastro/identidade"><button type="submit" id="cardBtn" class="btn btn-glass w-100">Continuar</button></a>
+                            </div>
+                            <div class="mt-2 mb-2">
+                                <p class="fs-6 text-light">Já possui uma conta? <a href="/login" class="text-2">Faça login</a></p>
+                            </div>
+                            <div class="mb-0">
+                                <a href="#" class="text-2 fs-foot">Termos de uso</a>
+                                <a href="#" class="text-2 fs-foot">Privacidade</a>
+                                <a href="#" class="text-2 fs-foot">Fale conosco</a>
+                            </div>
+                        </form>
+                    </div>
+                  </div>
+            </div>
+    </div>
+</body>
+<script>
+
+    const err = {{errStatus}}
+
+    if(err == 303){
+        
+        //Alerta de Endereço de Email Inválido.
+        document.getElementById('textEmail').classList.add("text-danger");
+        document.getElementById('textEmail').innerHTML = "Endereço de Email inválido!";
+        document.getElementById('textSenha').innerHTML = "";
+        document.getElementById('textConfirmSenha').innerHTML = "";
+        document.getElementById('reg_email').focus();
+    }
+    else if (err == 304){
+        
+        //Alerta de senha inexistente
+        document.getElementById('textSenha').classList.add("text-danger");
+        document.getElementById('textEmail').innerHTML = "";
+        document.getElementById('textSenha').innerHTML = "Coloque uma senha.";
+        document.getElementById('textConfirmSenha').innerHTML = "";
+        document.getElementById('reg_password').focus();
+    }
+    else if (err == 305){
+        
+        //Alerta de senhas não coincidintes
+        document.getElementById('textConfirmSenha').classList.add("text-danger");
+        document.getElementById('textEmail').innerHTML = "";
+        document.getElementById('textSenha').innerHTML = "";
+        document.getElementById('textConfirmSenha').innerHTML = "As senhas não coincidem, tente novamente.";
+        document.getElementById('reg_password').focus();
+    }
+</script>

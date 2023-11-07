@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="html" colormodel=>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+        <link rel="stylesheet" href="../css/bootstrap-grid.css">
+        <link rel="stylesheet" href="../css/bootstrap-utilities.css">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <style>
+            html {
+                scroll-behavior: smooth;
+                scrollbar-width: none;
+                scrollbar-color: #090909 #252525;
+                filter: var(--bs-body-acess-contrast);
+            }
+            ::-webkit-scrollbar {
+                width: none;
+            }
+        </style>
+    
+        <!--Icones-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+            
+        <!--Fontes-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+            
+        <!--Favicon-->
+        <link rel="shortcut icon" href="img/001padrao.png" type="image/x-icon">
+        <script src="../js/code.js" defer></script>
+        <script src="../js/colorsconfig.js" defer></script>
+        <script src="../js/cfigcontent.js" defer></script>
+        <script src="../js/bootstrap.bundle.js"></script>
+        <script src="../js/clock.js" defer></script>
+        <title>Configurações</title>
+    </head>
+<body class="bg-config inter-font" onload="timer()" id="body" theme-dicender=>
+    <div class="container-fluid">
+        <div class="my-4">
+            <img src="../img/001.svg" class="logo-full ms-3" alt="">
+            <h3 class="fw-600 list-inline-item float-end mt-4 me-5 align-middle" style="color: #73168C;">Temas</h3>
+        </div>
+        <object class="frame-config border border-4 bc-static-2 align-center" id="objectshow" type="text/html" data="menutest.html"></object>
+        <p class="fw-200 text-center">Esta é uma representação do tema escolhido aplicado ao conteúdo. Lindo, né?</p>
+        <hr class="border-top border-3 bc-static-3 opacity-100 mt-4"></hr>
+        <p class="text-center fw-400 mt-3">Escolha novos temas para ativar:</p>
+        <div class="container-fluid colorlist-config" id="colorList">
+            <a id="default" onclick="document.getElementById('objectshow').setAttribute('data', 'menutest.html')"><button class="switch-color-config" id="defaultcolor"><img src="../img/001.svg" class="switch-img-config" alt=""></button></a>
+            <a id="coloryellow" onclick="document.getElementById('objectshow').setAttribute('data', 'menutest.html')"><button class="switch-color-config" id="yellow"><img src="../img/001yellow.svg" class="switch-img-config" alt=""></button></a>
+            <a id="colorgreen" onclick="document.getElementById('objectshow').setAttribute('data', 'menutest.html')"><button class="switch-color-config" id="green"><img src="../img/001green.svg" class="switch-img-config" alt=""></button></a>
+            <a id="colorred" onclick="document.getElementById('objectshow').setAttribute('data', 'menutest.html')"><button class="switch-color-config" id="red"><img src="../img/001red.svg" class="switch-img-config" alt=""></button></a>
+            <a id="colorblack" onclick="document.getElementById('objectshow').setAttribute('data', 'menutest.html')"><button class="switch-color-config" id="black"><img src="../img/001black.svg" class="switch-img-config" alt=""></button></a>
+            <a id="colorwhite" onclick="document.getElementById('objectshow').setAttribute('data', 'menutest.html')"><button class="switch-color-config" id="white"><img src="../img/001white.svg" class="switch-img-config" alt=""></button></a>
+            <a id="blueyellow" onclick="document.getElementById('objectshow').setAttribute('data', 'menutest.html')"><button class="switch-color-config" id="blueNyellow"><img src="../img/001bny.svg" class="switch-img-config" alt=""></button></a>
+            <a id="purpleyellow" onclick="document.getElementById('objectshow').setAttribute('data', 'menutest.html')"><button class="switch-color-config" id="purpNyellow"><img src="../img/001pny.svg" class="switch-img-config" alt=""></button></a>
+            <a id="milesgradient" onclick="document.getElementById('objectshow').setAttribute('data', 'menutest.html')"><button class="switch-color-config" id="blackspider"><img src="../img/001miles.svg" class="switch-img-config" alt=""></button></a>
+            <a id="coffeetheme" onclick="document.getElementById('objectshow').setAttribute('data', 'menutest.html')"><button class="switch-color-config" id="coffee"><img src="../img/001coffee.svg" class="switch-img-config" alt=""></button></a>
+        </div>
+        <hr class="border-top border-3 bc-static-3 opacity-100 mt-4"></hr>
+        <p class="text-center">Cansados de usar os mesmos temas? Adquira novos na <a href="" style="color: #73168C;">loja de itens</a>.</p>
+        <div class="container-fluid">
+            <p class="text-center fw-500 text-post mb-0">As ofertas serão renovadas em:</p>
+            <h1 class="text-2 text-center fw-800 clock-size" id="clock" style="color: #73168C;">10:49h</h1>
+        </div>
+    </div>
+</body>
+</html>

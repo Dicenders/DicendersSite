@@ -1,0 +1,201 @@
+<body>
+<div id="journalpage" class="buttons d-none">
+  <div id="journalheader">
+    <button type="button" id="closeDiv" class="float-end"><i class="bi-x-lg"></i></button>
+  </div>
+  <p>A janela de fichas ainda está em desenvolvimento</p>
+  <img src="/img/001.svg" width="100%" alt="Logotipo Dicenders">
+</div>
+
+<div id="chatpage" class="buttons d-none">
+  <div id="chatheader">
+    <button type="button" id="closeDiv" class="float-end"><i class="bi-x-lg"></i></button>
+  </div>
+  <p>A janela de chat ainda está em desenvolvimento</p>
+  <img src="/img/001.svg" width="100%" alt="Logotipo Dicenders">
+</div>
+
+<div id="dicepage" class="buttons d-none">
+  <div id="diceheader">
+    <button type="button" id="closeDiv" class="float-end"><i class="bi-x-lg"></i></button>
+  </div>
+  <p>A janela de dados ainda está em desenvolvimento</p>
+  <img src="/img/001.svg" width="100%" alt="Logotipo Dicenders">
+</div>
+
+<div id="notespage" class="buttons d-none">
+  <div id="notesheader">
+    <button type="button" id="closeDiv" class="float-end"><i class="bi-x-lg"></i></button>
+  </div>
+  <p>A janela de notas ainda está em desenvolvimento</p>
+  <img src="/img/001.svg" width="100%" alt="Logotipo Dicenders">
+</div>
+
+    <div class="buttons l-2 t-5 flex-row">
+      <button class="m-1" onclick="window.location.href='/home'"><img src="/img/001.svg" alt=""></button>
+      <button class="m-1"><i class="bi-person" style="font-size: 1.5rem;"></i></button>
+      <button class="m-1" id="optChevron"><i class="bi-chevron-down" style="font-size: 1.5rem;"></i></button>
+    </div>
+    <div class="buttons l-2 t-10 flex-row d-none" id="optButtons">
+      <button class="m-1" id="journalbtn"><i class="bi-journal"></i></button>
+      <button class="m-1" id="chatbtn"><i class="bi-chat-right-dots-fill"></i></button>
+      <button class="m-1" id="diceBtn"><i class="fa-solid fa-dice-d20"></i></button>
+      <button class="m-1" id="notesbtn"><i class="bi-stickies-fill"></i></button>
+    </div>
+    <div class="buttons r-2 t-5">
+      <div class="dropdown">
+        <button class="d-flex justify-content-center" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false" style="min-width: 50px !important;"><i class="bi-chevron-down"></i></button>
+        <ul class="dropdown-menu dropmenu-buttons">
+          <li>
+            <button class="bi-plus-lg" id="addnew" data-bs-toggle="popover" data-bs-custom-class="custom-popover" data-bs-trigger="hover" data-bs-placement="left" data-bs-content="Criar elemento"></button>
+          </li>
+          <li>
+            <button class="bi-trash-fill" id="delete" data-bs-toggle="popover" data-bs-custom-class="custom-popover" data-bs-trigger="hover" data-bs-placement="left" data-bs-content="Excluir tudo"></button>
+          </li>
+          <li>
+            <button class="bi bi-floppy-fill" id="save" data-bs-toggle="popover" data-bs-custom-class="custom-popover" data-bs-trigger="hover" data-bs-placement="left" data-bs-content="Salvar"></button>
+          </li>
+          <li>
+            <button class="bi-upload" id="load" data-bs-toggle="popover" data-bs-custom-class="custom-popover" data-bs-trigger="hover" data-bs-placement="left" data-bs-content="Carregar"></button>
+          </li>
+          <li>
+              <input type="checkbox" id="dragmode" name="dragmode">
+              <label for="dragmode" id="draglabel" class="bi-cursor-fill" data-bs-toggle="popover" data-bs-custom-class="custom-popover" data-bs-trigger="hover" data-bs-placement="left" data-bs-content="Arrastar tabuleiro"></label>
+          </li>
+          <li>
+            <label for="uploader" class="bi-image" data-bs-toggle="popover" data-bs-custom-class="custom-popover" data-bs-trigger="hover" data-bs-placement="left" data-bs-content="Inserir imagem"></label>
+            <input id="uploader" type="file" class="hidden-input" multiple>
+          </li>
+          <li>
+            <label for="map" class="bi-folder-plus" data-bs-toggle="popover" data-bs-custom-class="custom-popover" data-bs-trigger="hover" data-bs-placement="left" data-bs-content="Inserir mapa"></label>
+            <input id="map" type="file" class="hidden-input" multiple>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="buttons l-2 b-5">
+      <div class="dropdown">
+        <button class="d-flex justify-content-center" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false"><i class="bi-three-dots-vertical"></i></button>
+        <ul class="dropdown-menu dropmenu-buttons">
+          <li id="lineW" data-bs-toggle="popover" data-bs-custom-class="custom-popover" data-bs-trigger="hover" data-bs-placement="right" data-bs-content="Linhas claras">
+            <span></span>
+          </li>
+          <li id="lineP" data-bs-toggle="popover" data-bs-custom-class="custom-popover" data-bs-trigger="hover" data-bs-placement="right" data-bs-content="Linhas roxas">
+            <span></span>
+          </li>
+          <li id="lineB" data-bs-toggle="popover" data-bs-custom-class="custom-popover" data-bs-trigger="hover" data-bs-placement="right" data-bs-content="Linhas escuras">
+            <span></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!---Menu de contexto do site-->
+    <div id="contextMenu" style="display: none">
+      <ul>
+        <li id="deleteob"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></li>
+        <li id="bringToFrontButton"><i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i></li>
+        <li id="sendToBackButton"><i class="fa-solid fa-arrow-down" style="color: #ffffff;"></i></li>
+        <li id="copy"><i class="fa-solid fa-copy" style="color: #ffffff;"></i></li>
+        <li id="paste"><i class="fa-solid fa-paste" style="color: #ffffff;"></i></li>
+        <li id="lock"><i class="fa-solid fa-unlock" style="color: #ffffff;"></i></li> 
+      </ul>
+    </div>
+
+    <canvas id="grid"></canvas>
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer>
+    
+    const socket = io({
+      auth: {
+        usertag: `{{usertag}}`,
+        link: `{{link}}` 
+      }
+    })
+
+      //trocar icone do arrastar tabuleiro
+      var dragmode = document.getElementById("dragmode");
+      const draglabel = document.getElementById("draglabel");
+      const btnopen = document.getElementById("optChevron");
+      const btnoptions = document.getElementById("optButtons");
+      const journalbtn = document.getElementById("journalbtn");
+      const journaldiv = document.getElementById("journalpage");
+      const journaldivheader = document.getElementById("journalheader");
+      const chatbtn = document.getElementById("chatbtn");
+      const chatdiv = document.getElementById("chatpage");
+      const chatdivheader = document.getElementById("chatheader");
+      const dicebtn = document.getElementById("diceBtn");
+      const dicediv = document.getElementById("dicepage");
+      const dicedivheader = document.getElementById("diceheader");
+      const notesbtn = document.getElementById("notesbtn");
+      const notesdiv = document.getElementById("notespage");
+      const notesdivheader = document.getElementById("notesheader");
+
+      dragmode.addEventListener("change", () => {
+        if(dragmode.checked === true){
+          draglabel.classList.replace("bi-cursor-fill", "bi-hand-index-fill");
+        } else{
+          draglabel.classList.replace("bi-hand-index-fill", "bi-cursor-fill");
+        }
+      })
+
+      btnopen.addEventListener("click", () => {
+        if(btnopen.firstChild.classList.contains("bi-chevron-down")){
+          btnopen.firstChild.classList.replace("bi-chevron-down", "bi-chevron-up");
+          btnoptions.classList.remove("d-none");
+        } else{
+          btnopen.firstChild.classList.replace("bi-chevron-up", "bi-chevron-down");
+          btnoptions.classList.add("d-none");
+        }
+      })
+
+      journalbtn.addEventListener("click", () => {
+        if(journaldiv.classList.contains("d-none")){
+          journaldiv.classList.remove("d-none");
+        } else{
+          journaldiv.classList.add("d-none");
+        }
+      })
+
+      journaldivheader.firstElementChild.addEventListener("click", () => {
+          journaldiv.classList.add("d-none");
+      })
+
+            chatbtn.addEventListener("click", () => {
+        if(chatdiv.classList.contains("d-none")){
+          chatdiv.classList.remove("d-none");
+        } else{
+          chatdiv.classList.add("d-none");
+        }
+      })
+
+      chatdivheader.firstElementChild.addEventListener("click", () => {
+          chatdiv.classList.add("d-none");
+      })
+
+            dicebtn.addEventListener("click", () => {
+        if(dicediv.classList.contains("d-none")){
+          dicediv.classList.remove("d-none");
+        } else{
+          dicediv.classList.add("d-none");
+        }
+      })
+
+      dicedivheader.firstElementChild.addEventListener("click", () => {
+          dicediv.classList.add("d-none");
+      })
+
+            notesbtn.addEventListener("click", () => {
+        if(notesdiv.classList.contains("d-none")){
+          notesdiv.classList.remove("d-none");
+        } else{
+          notesdiv.classList.add("d-none");
+        }
+      })
+
+      notesdivheader.firstElementChild.addEventListener("click", () => {
+          notesdiv.classList.add("d-none");
+      })
+    </script>
+</body>

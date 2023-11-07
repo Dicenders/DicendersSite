@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/css/bootstrap-utilities.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/gridcss/style.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="/js/gridjs/fabric.min.js"></script>
+    
+    <script
+      src="https://kit.fontawesome.com/86be8fef3e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    
+  </head>
+<body>
+    {{{body}}}
+</body>
+    <script src="/js/bootstrap.bundle.js"></script> 
+    <script src="/js/gridjs/grid.js"></script>
+    <script src="/js/gridjs/online.js"></script>
+    <script src="/js/gridjs/zoom.js"></script>
+    <script src="/js/gridjs/dragmode.js"></script>
+    <script src="/js/gridjs/dragscroll.js"></script>
+    <script src="/js/gridjs/upload.js"></script>
+    <script src="/js/gridjs/layers.js"></script>
+    <script src="/js/gridjs/copypaste.js"></script>
+    <script src="/js/gridjs/contextmenu.js"></script>
+    <script src="/js/gridjs/saveload.js"></script>
+    <script src="/js/gridjs/lock.js"></script>
+    <script src="/js/gridjs/map.js"></script>
+    <script src="/js/gridjs/controls.js"></script>
+    <script src="/js/gridjs/dragdiv.js"></script>
+    <script src="/js/gridjs/gridColor.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+      const gridMap = {{{grid}}};
+      loadInit(gridMap)
+
+      const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+      const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    </script>
+</html>

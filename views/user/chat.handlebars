@@ -1,0 +1,539 @@
+<body class="bg-5 oswald-font" id="body" onload="      messagesdiv.scrollTop = messagesdiv.scrollHeight; document.documentElement.scrollTop = document.documentElement.scrollHeight;" theme-dicender=>
+  <div>
+    <nav class="navbar sticky-top fw-300 navbar-expand-lg bg-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/home"><img src="/img/icon-glass.png" class="logo" alt="Logotipo Dicenders"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/home">
+                <p class="text-clean fs-5 m-2 fw-500">Menu</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="notificacoes">
+                <p class="text-clean fs-5 m-2 fw-500">Notificações</p>
+              </a>
+            </li>
+
+            <li class="nav-item dropdown m-2">
+              <div class="bg-5 profile row mx-0 rounded-5 container">
+                <div class="h-100 col-md-3 p-0">
+                  <div class="w-auto translate-middle-y top-50 end-0 position-relative rounded-circle profile-image">
+                      <a href="/social/{{usertag}}">              
+                      <img style="width: 100%; height: 100%; object-fit: cover;" class="position-absolute" src="{{{avatar}}}" alt="Imagem de perfil do usuário"> 
+                      </a>
+                  </div>
+                </div>
+                <div class="h-100 col-md-7 px-0">
+                  <h6 class="m-0 text-1 mt-1">{{username}}</h6>
+                  <p class="m-0 text-clean" style="font-size: 0.8rem;">@{{usertag}}</p>
+                </div>
+                <div class="h-100 col-md-2 position-relative dropdown">
+                  <i class="bi-three-dots-vertical position-absolute start-50 translate-middle text-1"
+                    style="font-size: 1.5rem; top: 45%;" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                    id="config"></i>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown drop-menu" id="dropdownPerfil">
+                    <li>
+                      <a class="dropdown-item switch-item" href="/social/{{usertag}}" id="">
+                        <i class="bi-person-fill text-2 fs-5"></i>
+                        <p class="text-2 m-1">Meu perfil</p>
+                      </a>
+                    </li>
+                    <li class="dropdown-item dropstart switch-item" id="" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="bi-brush-fill text-2 fs-5"></i>
+                      <p class="text-2 m-1">Meus temas</p>
+                      <ul class="dropdown-menu dropdown drop-menu"
+                        style="margin-right: -3% !important; box-shadow: 0 10px 40px #000;" id="colorList">
+                        <li>
+                          <a class="dropdown-item switch-item" id="default"><button class="switch-color"
+                              id="defaultcolor">
+                              <img src="/img/001.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema padrão">
+                            </button>
+                            <p class="text-2 text-center m-1">Dicenders Padrão</p>
+                            <button class="light-btn float-end bg-3" id="lightCheck"><i class=" text-5"
+                                id="lightModeIcon"></i></button>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item switch-item" id="coloryellow"><button class="switch-color" id="yellow">
+                              <img src="/img/001yellow.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema amarelo">
+                            </button>
+                            <p class="text-2 text-center m-1">Deserto Escaldante</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item switch-item" id="colorgreen"><button class="switch-color" id="green">
+                              <img src="/img/001green.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema verde">
+                            </button>
+                            <p class="text-2 text-center m-1">Floresta Amazônica</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item switch-item" id="colorred"><button class="switch-color" id="red">
+                              <img src="/img/001red.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema vermelho">
+                            </button>
+                            <p class="text-2 text-center m-1">Pináculo Ígneo</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item switch-item" id="colorblack"><button class="switch-color" id="black">
+                              <img src="/img/001black.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema preto">
+                            </button>
+                            <p class="text-2 text-center m-1">Cripta Soturna</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item switch-item" id="colorwhite"><button class="switch-color" id="white">
+                              <img src="/img/001white.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema branco">
+                            </button>
+                            <p class="text-2 text-center m-1">Terror Glacial</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item switch-item" id="blueyellow"><button class="switch-color"
+                              id="blueNyellow">
+                              <img src="/img/001bny.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema gradiente azul-amarelo">
+                            </button>
+                            <p class="text-2 text-center m-1">Estrondo Atroz</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item switch-item" id="purpleyellow"><button class="switch-color"
+                              id="purpNyellow">
+                              <img src="/img/001pny.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema gradiente roxo-amarelo">
+                            </button>
+                            <p class="text-2 text-center m-1">Bosque Convexo</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item switch-item" id="milesgradient"><button class="switch-color"
+                              id="blackspider">
+                              <img src="/img/001miles.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema preto-vermelho">
+                            </button>
+                            <p class="text-2 text-center m-1">Aranha Escarlate</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item switch-item" id="coffeetheme"><button class="switch-color" id="coffee">
+                              <img src="/img/001coffee.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema marrom">
+                            </button>
+                            <p class="text-2 text-center m-1">Ruína dos Ernos</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a class="dropdown-item switch-item" href="/login" id="">
+                        <i class="bi-person-fill-add text-2 fs-5"></i>
+                        <p class="text-2 m-1">Adicionar conta</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item switch-item" href="/configuracao" id="">
+                        <i class="bi-gear-fill text-2 fs-5"></i>
+                        <p class="text-2 m-1">Configurações</p>
+                      </a>
+                    </li>
+                    <li>
+                      <hr>
+                    </li>
+                    <li><a href="/home/logout" class="dropdown-item" id="">
+                        <p class="text-danger m-1">Logout</p>
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-1 border-end border-2 bc-2" style="min-height: 100vh;">
+          <div class="comunidades position-sticky">
+            <p class="text-2 text-center align-middle fw-400 fs-5 mt-social">Comunidades</p>
+            <hr class="mx-small">
+            <a href="#"><button class="comm-btn"><i class="bi-globe-americas"></i></button></a>
+            <a href="#"><button class="comm-btn"><i class="bi-globe-americas"></i></button></a>
+            <a href="#"><button class="comm-btn"><i class="bi-globe-americas"></i></button></a>
+            <a href="#"><button class="comm-btn"><i class="bi-plus-circle"></i></button></a>
+          </div>
+        </div>
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-7 border-end border-start border-2 p-0 bc-2">
+          <div id="chatFunction" class="">
+            <a onclick="history.back()" class="text-2"><i class="bi-arrow-left ms-3 position-absolute" style="font-size: xx-large;"></i></a>
+            <div id="chatHeader" class="row w-100 bg-5 border-2 border-bottom bc-2 align-center d-flex">
+              <div class="col-md-2">
+                <div
+                  class="w-100 top-50 start-50 translate-middle align-center position-relative rounded-circle chat-image">
+                  <img style="width: 100%; height: 100%; object-fit: cover;" class="position-absolute" src="{{userAvatar}}"alt="Imagem de perfil do usuário">
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="top-0">
+                  <p class="text-ldm text-2 fw-500 mb-0">{{userName}}</p>
+                  <p class="text-soft-ldm oswald-font text-half-white" style="line-height: 20px;">@{{userTag}}</p>
+                  <p class="text-soft-ldm my-4 text-clean">{{userDesc}}</p>
+                  <div class="d-flex">
+                    <p class="text-clean text-soft-ldm">Seguido por <b class="text-2">{{userFollower.length}}</b></p>
+                    <p class="text-clean text-soft-ldm mx-3">Seguindo <b class="text-2">{{userFollowing.length}}</b></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div id="chatDataOptions"
+                  class="d-flex flex-row flex-wrap justify-content-evenly top-50 start-50 translate-middle position-relative text-2 fw-400">
+                  <div class="w-50"><i class="bi-bell-slash text-ldm align-center text-center"></i>
+                    <p class="text-center">Silenciar</p>
+                  </div>
+                  <div class="w-50"><i class="bi-person text-ldm align-center text-center"></i>
+                    <p class="text-center">Perfil</p>
+                  </div>
+                  <div class="w-50"><i class="bi-search text-ldm align-center text-center"></i>
+                    <p class="text-center">Pesquisar</p>
+                  </div>
+                  <div class="w-50"><i class="bi-three-dots text-ldm align-center text-center"></i>
+                    <p class="text-center">Opções</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-100 overflow-y-auto" id="messages">
+
+              {{#if messages}}
+              {{#each messages}}
+              {{#if autor}}
+              <div id="sender" class="float-end">
+                <div class="row my-3">
+                  <div class="col-md-1 p-0 d-flex justify-content-end align-items-center">
+                    <a class="btn btn-msg p-1 fs-4 rounded-circle"><i class="bi-three-dots"
+                        style="display:flex; justify-content: center; align-items: center;"></i></a>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="p-3 rounded-4 bg-3">
+                      <p id="messageContent" class="text-half-white">
+                        {{remetente}}: {{conteudo}}
+                      </p>
+                    </div>
+                    <div class="d-flex text-sdm fw-100 float-start ms-3" id="sendDate">
+                      <p class="my-0">{{createdAt}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {{else}}
+              <div id="recipient">
+                <div class="row my-3">
+                  <div class="col-md-11">
+                    <div class="p-3 rounded-4 bg-4">
+                      <p id="messageContent" class="text-half-white">
+                        {{remetente}}: {{conteudo}}
+                      </p>
+                    </div>
+                    <div class="d-flex text-sdm fw-100 float-end me-3" id="sendDate">
+                      <p class="my-0">{{createdAt}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-1 p-0 d-flex justify-content-start align-items-center">
+                    <a class="btn btn-msg p-1 fs-4 rounded-circle"><i class="bi-three-dots"
+                        style="display:flex; justify-content: center; align-items: center;"></i></a>
+                  </div>
+                </div>
+              </div>
+              {{/if}}
+              {{/each}}
+              {{else}}
+
+              <div id="messages"></div>
+              {{/if}}
+            </div>
+            <form id="msgForm" action="">
+              <div class="d-flex w-100 bottom-0 bg-5 justify-content-center" style=" z-index: 5;">
+                <div class="row my-2 bg-5 border border-3 bc-2 rounded-pill text-2" style="width: 90%;">
+                  <div class="col-md-1 d-grid justify-content-center align-items-center">
+                    <i class="bi-plus-circle text-post" data-bs-toggle="dropdown" data-bs-auto-close="outside"></i>
+                      <ul class="dropdown-menu drop drop-menu">
+                        <li class="dropdown-item switch-item" id="docsChat">
+                          <label for="docuChat" class="d-flex">
+                            <i class="bi-file-earmark px-2 rounded-circle text-ldm text-2"></i><p class="text-2 mb-0" style="line-height: 250%;">Documentos</p>
+                          </label>
+                          <input type="file" class="d-none" accept=".doc, .docx, .pptx, .pdf, .xlsx" required name="docuChat" id="docuChat" aria-label="Upload image to send on chat">
+                        </li>
+                        <li class="dropdown-item switch-item" id="imgsChat">
+                          <label for="imageChat" class="d-flex">
+                            <i class="bi-images px-2 rounded-circle text-ldm text-2"></i><p class="text-2 mb-0" style="line-height:250%;">Mídias</p>
+                          </label>
+                          <input type="file" class="d-none" accept=".png, .svg, .jpg, .jpeg" required name="imageChat" id="imageChat">
+                        </li>
+                      </ul>
+                  </div>
+                  <div class="col-md-10">
+                    <input class="bg-glass fs-5 text-2" type="text" name="" id="msgInput">
+                  </div>
+                  <div class="col-md-1 d-grid justify-content-center align-items-center">
+                    <button id="msgSend" style="display: none;">
+                      <i class="bi bi-send-fill"></i>
+                    </button>
+                      <i class="bi-emoji-smile text-post" id="eSelectorIconChat" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"></i>
+                      <ul class="dropdown-menu drop drop-menu" style="width: 400px; overflow-y: scroll; height: 50vh;">
+                        <li class="emoji-selector" id="eSelectorChat">
+                          <div class="input-container">
+                            <input id="eSearchChat" type="text" class="bg-glass text-2 position-relative top-0"
+                              placeholder="Procurar...">
+                          </div>
+                          <ul id="eListChat" class="emoji-list">
+
+                          </ul>
+                      </ul>
+                  </div>
+                </div>
+            </form>
+          </div>
+        </div>
+          <div id="docsAppear" class="bg-5 vh-100 d-none">
+            <div class="d-flex flex-column top-50 position-relative translate-middle-y">
+              <button type="button" id="closeChat" class="btn-close bi-x-lg text-center align-middle mx-5" style="color: var(--bs-color-2);"></button>
+              <div class="align-center position-relative chat-post-image my-5">
+                <img style="width: 100%; height: 100%; object-fit: cover;" class="position-absolute align-center" src="/img/profile-icon.jpg" id="chatSelected" alt="Imagem selecionada para ser enviada como mensagem"> 
+                <p id="docSelected"></p>
+              </div>
+              <div class="align-center my-5 w-50" style="">
+                <input type="text" class="bg-glass input-contato px-3">
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-2">
+        <div class="comunidades position-sticky">
+        <div class="mb-3 parent">
+          <input type="text" class="form-control bg-glass text-2 bs-0 mt-social" id="input_search" name="inputsearch"
+            autocomplete="off" aria-describedby="emailHelp" placeholder="Busca"
+            style="padding-left: 2rem; border-radius: 30px;">
+          <i class="bi-search text-2" id="search"></i>
+        </div>
+        <div class="container-fluid">
+          <a href="/social"><button class="option-media align-center"><i class="bi-house-door-fill"></i>
+              <p class="inter-font fw-600">Página inicial</p>
+            </button></a>
+          <a href="mensagens"><button class="option-media align-center" id="message"><i
+                class="bi-chat-left-text-fill"></i>
+              <p class="inter-font fw-600">Mensagens</p>
+            </button></a>
+          <a href="notificacoes"><button class="option-media align-center"><i class="bi-bell-fill"></i>
+              <p class="inter-font fw-600">Notificações</p>
+            </button></a>
+        </div>
+        <div class=" mt-3">
+          <button type="submit" id="publicarBtn" class="btn inter-font fw-600 text-post btn-glass w-100"
+            data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 50px;">Publicar</button>
+        </div>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content position-absolute bg-glass text-2">
+              <div class="modal-header border-2 bc-2">
+                <button type="button" class="btn-close bi-x-lg text-center align-middle" data-bs-dismiss="modal"
+                  aria-label="Close" style="color: var(--bs-color-2);"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-2">
+                    <div class="translate-middle top-25 start-50 position-relative rounded-circle modal-post-image">
+                      <img style="width: 100%; height: 100%; object-fit: cover;" class="position-absolute"
+                        src="{{{avatar}}}" alt="Imagem de perfil do usuário">
+                    </div>
+                  </div>
+                  <div class="col-md-10 ps-0">
+                    <form id="form-post" action="/social/newpost" method="POST">
+                      <textarea autofocus name="conteudo" form="form-post" tabindex="1"
+                        class="form-control text-2 bg-glass border-0" wrap="wrap" id="postTextArea" rows="3"
+                        placeholder="No que está pensando?"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer border-2 bc-2">
+                <div class="position-absolute float-start start-0 mx-3">
+                  <div class="dropdown-center list-inline-item mx-1">
+                    <i class="bi-emoji-smile image-icon-post" id="emojiSelectorIcon" type="button"
+                      data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                    </i>
+                    <ul class="dropdown-menu drop drop-menu" style="width: 400px; overflow-y: scroll; height: 50vh;">
+                      <li class="emoji-selector" id="emojiSelector">
+                        <div class="input-container">
+                          <input id="emojiSearch" type="text" class="bg-glass text-2 position-relative top-0"
+                            placeholder="Procurar...">
+                        </div>
+                        <ul id="emojiList" class="emoji-list">
+
+                        </ul>
+                    </ul>
+                  </div>
+
+                  <div class="image-upload list-inline-item mx-1">
+                    <label for="uploadImage">
+                      <span class="">
+                        <i class="bi-image image-icon-post"></i>
+                      </span>
+                    </label>
+                    <input id="uploadImage" type="file" accept="image/*">
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-glass float-end">Finalizar postagem</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer"></div>
+  </div>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io({
+    auth: {
+      usertag: `{{usertag}}`,
+      talkTo: `{{userTag}}`
+    }
+  });
+
+
+
+  const msgForm = document.getElementById('msgForm')
+  const msgInput = document.getElementById('msgInput')
+  const msgSend = document.getElementById('msgSend')
+  const messagesdiv = document.querySelector('#messages')
+  const docChat = document.getElementById('docsChat')
+  const imageChat = document.getElementById('imgsChat')
+  const closeChat = document.getElementById('closeChat')
+  const divChat = document.getElementById('chatFunction')
+  const divDocs = document.getElementById('docsAppear')
+  const selectedImg = document.getElementById('chatSelected')
+  const selectedDoc = document.getElementById('docSelected')
+
+
+  msgSend.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (msgInput.value) {
+      socket.emit('chat message', msgInput.value, `{{usertag}}`, `{{userTag}}`);
+      msgInput.value = '';
+    }
+  });
+
+              
+
+  socket.on('chat message', function (msg, by, to, time) {
+
+    if (by == `{{usertag}}`) {
+
+      const msgFormat = document.createElement("div");
+      msgFormat.innerHTML = `
+      <div id="sender" class="float-end">
+        <div class="row my-3">
+          <div class="col-md-1 p-0 d-flex justify-content-end align-items-center">
+            <a class="btn btn-msg p-1 fs-4 rounded-circle"><i class="bi-three-dots"  style="display:flex; justify-content: center; align-items: center;"></i></a>
+          </div>
+          <div class="col-md-11">
+            <div class="p-3 rounded-4 bg-3">
+              <p id="messageContent" class="text-half-white">
+                ${by}: ${msg}
+              </p>
+            </div>
+            <div class="d-flex text-sdm fw-100 float-start ms-3" id="sendDate">
+              <p class="my-0">${time}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+      messagesdiv.appendChild(msgFormat);
+      messagesdiv.scrollTop = messagesdiv.scrollHeight;
+      document.documentElement.scrollTop = document.documentElement.scrollHeight;
+
+    } else {
+      const msgFormat = document.createElement("div");
+      msgFormat.innerHTML = `
+      <div id="recipient" class="float-start">
+        <div class="row my-3">
+            <div class="col-md-11">
+              <div class="p-3 rounded-4 bg-4">
+                <p id="messageContent" class="text-half-white">
+                  ${by}: ${msg}
+                </p>
+              </div>
+              <div class="d-flex text-sdm fw-100 float-end me-3" id="sendDate">
+                <p class="my-0">${time}}</p>
+              </div>
+            </div>
+            <div class="col-md-1 p-0 d-flex justify-content-start align-items-center">
+              <a class="btn btn-msg p-1 fs-4 rounded-circle"><i class="bi-three-dots"  style="display:flex; justify-content: center; align-items: center;"></i></a>
+            </div>
+          </div>
+        </div>
+      `;
+
+      messagesdiv.appendChild(msgFormat);
+      messagesdiv.scrollTop = messagesdiv.scrollHeight;
+      document.documentElement.scrollTop = document.documentElement.scrollHeight;
+    }
+  })
+
+
+//muda as divs quando clica no botão de fechar
+closeChat.addEventListener('click', () => {
+  divDocs.classList.add('d-none');
+  divChat.classList.remove('d-none');
+})
+
+//captura a imagem ou arquivo selecionado
+imageChat.addEventListener('change', () => {
+  const file = event.target.files[0];
+
+  if(file){
+    const reader = new FileReader();
+
+
+    reader.addEventListener('load', () => {
+      selectedImg.src = event.target.result;
+    })
+
+    reader.readAsDataURL(file);
+    divChat.classList.add('d-none');
+    divDocs.classList.remove('d-none');
+  }
+})
+
+docChat.addEventListener('change', () => {
+  const file = event.target.files[0];
+
+  if(file){
+    const reader = new FileReader();
+    console.log(file.name)
+
+
+    reader.addEventListener('load', () => {
+      selectedImg.src = '/img/arquivo.png';
+      selectedDoc.textContent = file.name;
+    })
+
+    reader.readAsDataURL(file);
+    divChat.classList.add('d-none');
+    divDocs.classList.remove('d-none');
+  }
+})
+
+</script>

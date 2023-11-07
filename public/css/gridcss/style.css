@@ -1,0 +1,174 @@
+body {
+  font-family: arial, sans-serif;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.buttons {
+  background-color: rgba(101, 22, 123, 0.7); /* Cor de fundo com 50% de opacidade */
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 4; 
+}
+
+.buttons img{
+  max-width: 2.5rem;
+}
+
+.t-5{
+  top: 5%;
+}
+
+.t-10{
+  top: 20%;
+}
+
+.b-5{
+  bottom: 5%;
+}
+
+.l-2{
+  left: 2%;
+}
+
+.r-2{
+  right: 2%;
+}
+
+ul{
+  list-style: none; 
+}
+
+.dropmenu-buttons{
+  position: absolute;
+  background-color: rgba(101, 22, 123, 0.7);
+  min-width: 50px !important;
+  line-height: 250% !important;
+}
+
+.dropmenu-buttons:nth-child(n){
+  width: 100%;
+  text-align: center;
+}
+
+.buttons button, .buttons label{
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.9); /* Cor do texto com 50% de opacidade */
+  cursor: pointer;
+}
+
+.buttons li:hover, .buttons button:hover{
+  background-color: #55287a;
+}
+
+.file-button {
+  position: relative;
+  padding: 0.5rem;
+  color: rgba(255, 255, 255, 0.9); /* Cor do texto com 50% de opacidade */
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.file-button:hover {
+  background-color: #55287a;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.custom-popover{
+  background-color: rgba(116, 57, 165, 0.9); 
+  --bs-popover-body-color: #fff;
+  color: #fff !important;
+  font-size: small !important;
+  padding: 0 !important;
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.popover-arrow, .popover-arrow::after, .popover-arrow::before{
+  display: none !important;
+}
+
+#contextMenu {
+  position: absolute;
+  background-color: rgba(116, 57, 165, 0.9); /* Cor de fundo com 50% de opacidade */
+  color: rgba(255, 255, 255, 0.9); /* Cor do texto com 50% de opacidade */
+  border: none;
+  padding: 6px;
+  z-index: 9999;
+  display: flex;
+  border-radius: 5px;
+}
+
+#contextMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+#contextMenu li:hover {
+  background-color: #55287a;
+}
+
+#contextMenu li {
+  cursor: pointer;
+  padding: 6px;
+  border-right: 2px solid #55287a;
+}
+
+#contextMenu li:last-child {
+  border-right: none;
+}
+
+#dragmode {
+  display: none;
+}
+
+#journalpage, #chatpage, #dicepage, #notespage {
+  position: absolute;
+  z-index: 9;
+  border: 1px solid rgb(27, 27, 27, 0.8);
+  color: #fff;
+  top: 35%;
+  left: 2%;
+  text-align: center;
+}
+
+#journalheader, #chatheader, #diceheader, #notesheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  border-bottom: rgb(27, 27, 27, 0.8) 2px solid;
+}
+
+#lineW span, #lineP span, #lineB span{
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 2rem;
+  height: 2rem;
+}
+
+#lineW span{
+  background-color: #F0D2FC;
+}
+
+#lineP span{
+  background-color: #9F2CBF;
+}
+
+#lineB span{
+  background-color: #000;
+}

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="html" colormodel=>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="../css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../css/bootstrap-utilities.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            scrollbar-color: #090909 #252525;
+            filter: var(--bs-body-acess-contrast);
+        }
+        ::-webkit-scrollbar {
+            width: none;
+        }
+    </style>
+
+    <!--Icones-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+        
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../img/001padrao.png" type="image/x-icon">
+    <script src="../js/code.js" defer></script>
+    <script src="../js/colors.js" defer></script>
+    <script src="../js/sliders.js" defer></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <title>Menu</title>
+</head>
+<body class="bg-5 oswald-font" id="body" theme-dicender=>
+    <nav class="navbar fw-300 navbar-expand-lg bg-3">
+        <div class="container-fluid">
+            <a class="navbar-brand ps-3" href="#"><img src="../img/icon-glass.png" class="logo" alt="logotipo Dicenders"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>   
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="social.html"><p class="text-clean fs-5 m-2 fw-500">Social</p></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="notificacoes.html"><p class="text-clean fs-5 m-2 fw-500">Notificações</p></a>
+              </li>
+
+              <li class="nav-item dropdown m-2">
+                <div class="bg-5 profile row mx-0 rounded-5 container">
+                  <div class="h-100 col-md-3 p-0">
+                    <div class="w-auto translate-middle-y top-50 end-0 position-relative rounded-circle profile-image">
+                      <img style="width: 100%; height: 100%; object-fit: cover;" class="position-absolute" src="" alt="Imagem de exemplo 1">
+                    </div>
+                  </div>
+                  <div class="h-100 col-md-7 px-0">
+                    <h6 class="m-0 text-1 mt-1"></h6>
+                    <p class="m-0 text-clean" style="font-size: 0.8rem;"></p>
+                  </div>
+                    <div class="h-100 col-md-2 position-relative dropdown">
+                      <i class="bi-three-dots-vertical position-absolute start-50 translate-middle text-1" style="font-size: 1.5rem; top: 45%;" data-bs-toggle="dropdown" data-bs-auto-close="outside" id="config"></i>
+                      <ul class="dropdown-menu dropdown-menu-end dropdown drop-menu" id="dropdownPerfil">
+                        <li>
+                          <a class="dropdown-item switch-item" id="">
+                            <i class="bi-person-fill text-2 fs-5"></i>
+                            <p class="text-2 m-1">Meu perfil</p>
+                          </a>
+                        </li>
+                        <li class="dropdown-item dropstart switch-item" id="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="bi-brush-fill text-2 fs-5"></i>
+                            <p class="text-2 m-1">Meus temas</p>
+                            <ul class="dropdown-menu dropdown drop-menu" style="margin-right: -3% !important; box-shadow: 0 10px 40px #000;" id="colorList">
+                              <li>
+                                <a class="dropdown-item switch-item" id="default"><button class="switch-color" id="defaultcolor">
+                                    <img src="../img/001.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema padrão">
+                                  </button> 
+                                  <p class="text-2 text-center m-1" >Dicenders Padrão</p>
+                                  <button class="light-btn float-end bg-3" id="lightCheck"><i class=" text-5" id="lightModeIcon"></i></button> 
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item switch-item" id="coloryellow"><button class="switch-color" id="yellow">
+                                    <img src="../img/001yellow.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema amarelo">
+                                  </button>
+                                  <p class="text-2 text-center m-1" >Deserto Escaldante</p>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item switch-item" id="colorgreen"><button class="switch-color" id="green">
+                                    <img src="../img/001green.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema verde">
+                                  </button>
+                                  <p class="text-2 text-center m-1" >Floresta Amazônica</p>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item switch-item" id="colorred"><button class="switch-color" id="red">
+                                    <img src="../img/001red.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema vermelho">
+                                  </button>
+                                  <p class="text-2 text-center m-1" >Pináculo Ígneo</p>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item switch-item" id="colorblack"><button class="switch-color" id="black">
+                                    <img src="../img/001black.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema preto">
+                                  </button>
+                                  <p class="text-2 text-center m-1" >Cripta Soturna</p>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item switch-item" id="colorwhite"><button class="switch-color" id="white">
+                                    <img src="../img/001white.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema branco">
+                                  </button>
+                                  <p class="text-2 text-center m-1" >Terror Glacial</p>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item switch-item" id="blueyellow"><button class="switch-color" id="blueNyellow">
+                                    <img src="../img/001bny.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema gradiente azul-amarelo">
+                                  </button>
+                                  <p class="text-2 text-center m-1" >Estrondo Atroz</p>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item switch-item" id="purpleyellow"><button class="switch-color" id="purpNyellow">
+                                    <img src="../img/001pny.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema gradiente roxo-amarelo">
+                                  </button>
+                                  <p class="text-2 text-center m-1" >Bosque Convexo</p>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item switch-item" id="milesgradient"><button class="switch-color" id="blackspider">
+                                    <img src="../img/001miles.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema gradiente preto-vermelho">
+                                  </button>
+                                  <p class="text-2 text-center m-1" >Aranha Escarlate</p>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item switch-item" id="coffeetheme"><button class="switch-color" id="coffee">
+                                    <img src="../img/001coffee.svg" class="switch-img" alt="Logotipo Dicenders para escolha do tema marrom">
+                                  </button>
+                                  <p class="text-2 text-center m-1" >Ruína dos Ernos</p>
+                                </a>
+                              </li>
+                            </ul>
+                        </li>
+                        <li>
+                          <a class="dropdown-item switch-item" href="login.php" id="">
+                            <i class="bi-person-fill-add text-2 fs-5"></i>
+                            <p class="text-2 m-1">Adicionar conta</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item switch-item" href="configuracao.html" id="">
+                            <i class="bi-gear-fill text-2 fs-5"></i>
+                            <p class="text-2 m-1">Configurações</p>
+                          </a>
+                        </li>
+                        <li><hr></li>
+                        <li><a href="logout.php" class="dropdown-item" id=""><p class="text-danger m-1">Logout</p></a></li>
+                      </ul>
+                    </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="my-5">
+      <a href="social.php">
+        <div class="c-up bg-4 fs-4">
+          <p class="my-1 mx-5">Explorar</p>
+        </div>
+      </a>
+      <div class="c-menu bg-4">
+        <div class="row wrap">
+          <i id="wrapLeft" class="bi-chevron-compact-left wrap-i"></i>
+          <a href="social.php" onclick="mudaPagina()"><i id="plusPost" class="bi-plus wrap-plus"></i></a>
+          <ul id="wrapcar" class="wrap_car">
+            <li class="wrap_card">
+              <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                <img src="../img/imagemPosts(1).jpg" class="card-img-top img-card-menu" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title title-limit">Card title Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque!</h5>
+                  <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="mb-3">
+                    <i class="bi-heart-fill mx-1 text-2" ></i>
+                    <i class="bi-chat-right-fill mx-1 text-2"></i>
+                    <i class="bi-share-fill mx-1 text-2"></i>
+                  </div>
+                  <div class="text-center m-1">                
+                    <a href="#" class="text-2 text-decoration-underline">Saiba mais</a>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+            <li class="wrap_card">
+              <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                <img src="../img/imagemPosts(2).jpg" class="card-img-top img-card-menu" alt="...">
+                <div class="card-body ">
+                  <h5 class="card-title title-limit">Card title</h5>
+                  <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text</p>
+                  <div class="mb-3">
+                    <i class="bi-heart-fill mx-1 text-2"></i>
+                    <i class="bi-chat-right-fill mx-1 text-2"></i>
+                    <i class="bi-share-fill mx-1 text-2"></i>
+                  </div>
+                  <div class="text-center m-1">                
+                    <a href="#" class="text-2 text-decoration-underline">Saiba mais</a>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+            <li class="wrap_card">
+              <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                <img src="../img/imagemPosts(3).jpg" class="card-img-top img-card-menu" alt="...">
+                <div class="card-body ">
+                  <h5 class="card-title title-limit">Card title</h5>
+                  <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="mb-3">
+                    <i class="bi-heart-fill mx-1 text-2"></i>
+                    <i class="bi-chat-right-fill mx-1 text-2"></i>
+                    <i class="bi-share-fill mx-1 text-2"></i>
+                  </div>
+                  <div class="text-center m-1">                
+                    <a href="#" class="text-2 text-decoration-underline">Saiba mais</a>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+            <li class="wrap_card">
+              <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                <img src="../img/imagemPosts(4).jpg" height="186px" class="card-img-top img-card-menu" alt="...">
+                <div class="card-body ">
+                  <h5 class="card-title title-limit">Card title</h5>
+                  <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="mb-3">
+                    <i class="bi-heart-fill mx-1 text-2"></i>
+                    <i class="bi-chat-right-fill mx-1 text-2"></i>
+                    <i class="bi-share-fill mx-1 text-2"></i>
+                  </div>
+                  <div class="text-center m-1">                
+                    <a href="#" class="text-2 text-decoration-underline">Saiba mais</a>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+            <li class="wrap_card">
+              <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                <img src="../img/imagemPosts(5).jpg" class="card-img-top img-card-menu" alt="...">
+                <div class="card-body ">
+                  <h5 class="card-title title-limit">Card title</h5>
+                  <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="mb-3">
+                    <i class="bi-heart-fill mx-1 text-2"></i>
+                    <i class="bi-chat-right-fill mx-1 text-2"></i>
+                    <i class="bi-share-fill mx-1 text-2"></i>
+                  </div>
+                  <div class="text-center m-1">                
+                    <a href="#" class="text-2 text-decoration-underline">Saiba mais</a>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+            <li class="wrap_card">
+              <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                <img src="../img/imagemPosts(6).jpg" class="card-img-top img-card-menu" alt="...">
+                <div class="card-body ">
+                  <h5 class="card-title title-limit">Card title</h5>
+                  <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="mb-3">
+                    <i class="bi-heart-fill mx-1 text-2"></i>
+                    <i class="bi-chat-right-fill mx-1 text-2"></i>
+                    <i class="bi-share-fill mx-1 text-2"></i>
+                  </div>
+                  <div class="text-center m-1">                
+                    <a href="#" class="text-2 text-decoration-underline">Saiba mais</a>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+            <li class="wrap_card">
+              <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                <img src="../img/imagemPosts(7).jpg" class="card-img-top img-card-menu" alt="...">
+                <div class="card-body ">
+                  <h5 class="card-title title-limit">Card title</h5>
+                  <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="mb-3">
+                    <i class="bi-heart-fill mx-1 text-2"></i>
+                    <i class="bi-chat-right-fill mx-1 text-2"></i>
+                    <i class="bi-share-fill mx-1 text-2"></i>
+                  </div>
+                  <div class="text-center m-1">                
+                    <a href="#" class="text-2 text-decoration-underline">Saiba mais</a>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+            <li class="wrap_card">
+              <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                <img src="../img/imagemPosts(8).jpg" class="card-img-top img-card-menu" alt="...">
+                <div class="card-body ">
+                  <h5 class="card-title title-limit">Card title</h5>
+                  <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="mb-3">
+                    <i class="bi-heart-fill mx-1 text-2"></i>
+                    <i class="bi-chat-right-fill mx-1 text-2"></i>
+                    <i class="bi-share-fill mx-1 text-2"></i>
+                  </div>
+                  <div class="text-center m-1">                
+                    <a href="#" class="text-2 text-decoration-underline">Saiba mais</a>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+            <li class="wrap_card">
+              <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                <img src="../img/imagemPosts(9).png" class="card-img-top img-card-menu" alt="...">
+                <div class="card-body ">
+                  <h5 class="card-title title-limit">Card title</h5>
+                  <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="mb-3">
+                    <i class="bi-heart-fill mx-1 text-2"></i>
+                    <i class="bi-chat-right-fill mx-1 text-2"></i>
+                    <i class="bi-share-fill mx-1 text-2"></i>
+                  </div>
+                  <div class="text-center m-1">                
+                    <a href="#" class="text-2 text-decoration-underline">Saiba mais</a>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+            <li class="wrap_card">
+              <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                <img src="../img/imagemPosts(3).jpg" class="card-img-top img-card-menu" alt="...">
+                <div class="card-body ">
+                  <h5 class="card-title title-limit">Card title</h5>
+                  <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="mb-3">
+                    <i class="bi-heart-fill mx-1 text-2"></i>
+                    <i class="bi-chat-right-fill mx-1 text-2"></i>
+                    <i class="bi-share-fill mx-1 text-2"></i>
+                  </div>
+                  <div class="text-center m-1">                
+                    <a href="#" class="text-2 text-decoration-underline">Saiba mais</a>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+          </ul>
+          <i id="wrap-right" text-anchor="middle" class="bi-chevron-compact-right wrap-i"></i>            
+        </div>
+      </div>  
+    </div>      
+      
+      <div class="my-5">
+        <div class="c-up bg-4 fs-4">
+          <p class="my-1 mx-5">Expandir</p>
+        </div>
+        <div class="c-menu bg-4">
+          <div class="row wrap-map">
+            <i id="wrapLeft" class="bi-chevron-compact-left wrap-i"></i>
+            <ul id="wrapcar" class="wrap_car-map">
+              <li class="wrap_card-map">
+                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                  <img src="../img/bg_sign.svg" class="card-img-top img-card-menu" alt="...">
+                  <div class="card-body ">
+                    <h5 class="card-title title-limit">Card title Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque!</h5>
+                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="text-center m-1">                
+                      <div class=" mt-3">
+                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </li>
+              <li class="wrap_card-map">
+                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                  <img src="../img/bg_sign.svg" class="card-img-top img-card-menu" alt="...">
+                  <div class="card-body ">
+                    <h5 class="card-title title-limit">Card title</h5>
+                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text</p>
+                    <div class="text-center m-1">                
+                      <div class=" mt-3">
+                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </li>
+              <li class="wrap_card-map">
+                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                  <img src="../img/bg_sign.svg" class="card-img-top img-card-menu" alt="...">
+                  <div class="card-body ">
+                    <h5 class="card-title title-limit">Card title</h5>
+                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="text-center m-1">                
+                      <div class=" mt-3">
+                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </li>
+              <li class="wrap_card-map">
+                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                  <img src="../img/bg_sign.svg" height="186px" class="card-img-top img-card-menu" alt="...">
+                  <div class="card-body ">
+                    <h5 class="card-title title-limit">Card title</h5>
+                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="text-center m-1">                
+                      <div class=" mt-3">
+                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </li>
+              <li class="wrap_card-map">
+                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                  <img src="../img/bg_sign.svg" class="card-img-top img-card-menu" alt="...">
+                  <div class="card-body ">
+                    <h5 class="card-title title-limit">Card title</h5>
+                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="text-center m-1">                
+                      <div class=" mt-3">
+                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </li>
+              <li class="wrap_card-map">
+                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                  <img src="../img/bg_sign.svg" class="card-img-top img-card-menu" alt="...">
+                  <div class="card-body ">
+                    <h5 class="card-title title-limit">Card title</h5>
+                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="text-center m-1">                
+                      <div class=" mt-3">
+                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </li>
+              <li class="wrap_card-map">
+                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                  <img src="../img/bg_sign.svg" class="card-img-top img-card-menu" alt="...">
+                  <div class="card-body ">
+                    <h5 class="card-title title-limit">Card title</h5>
+                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="text-center m-1">                
+                      <div class=" mt-3">
+                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </li>
+              <li class="wrap_card-map">
+                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                  <img src="../img/bg_sign.svg" class="card-img-top img-card-menu" alt="...">
+                  <div class="card-body ">
+                    <h5 class="card-title title-limit">Card title</h5>
+                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="text-center m-1">                
+                      <div class=" mt-3">
+                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </li>
+              <li class="wrap_card-map">
+                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                  <img src="../img/bg_sign.svg" class="card-img-top img-card-menu" alt="...">
+                  <div class="card-body ">
+                    <h5 class="card-title title-limit">Card title</h5>
+                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="text-center m-1">                
+                      <div class=" mt-3">
+                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </li>
+              <li class="wrap_card-map">
+                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
+                  <img src="../img/bg_sign.svg" class="card-img-top img-card-menu" alt="...">
+                  <div class="card-body ">
+                    <h5 class="card-title title-limit">Card title</h5>
+                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="text-center m-1">                
+                      <div class=" mt-3">
+                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <i id="wrap-right" text-anchor="middle" class="bi-chevron-compact-right wrap-i"></i>            
+          </div>
+        </div>  
+      </div> 
+
+    <div class="footer"></div>
+</body>
+</html>

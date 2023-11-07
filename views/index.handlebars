@@ -1,0 +1,339 @@
+<body class="bg-5 oswald-font" theme-dicender=default>
+  <button type="button" class="btn btn-primary" id="buttonModal" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="display: none;">
+    Launch static backdrop modal
+  </button>
+  
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content position-absolute bg-glass text-2">
+        <div class="modal-header border-2 bc-2">
+          <button type="button" class="btn-close bi-x-lg text-center align-middle" data-bs-dismiss="modal" aria-label="Close" style="color: var(--bs-color-2);"></button>
+        </div>
+        <div class="modal-body">
+          <h1 class="text-2 text-post text-center">Talvez o nosso site não esteja muito visível!</h1>
+          <p class="text-2"> É importante para nós que todos sejam capaz de ler este texto, bem como utilizar o site sem grandes problemas. Se você é capaz de ler este alerta, apenas pressione o botão "navegar".</p>
+          <p class="text-2">Este alerta não será exibido novamente. Para alterar a configuração de alto-contraste ou qualquer outra configuração de acessibilidade, entre em <b>Configurações > Personalização > Acessibilidade</b>.</p>
+          <button type="submit" class="btn btn-danger text-warning align-center w-50" onclick="ativacontraste()" style="background-color: #ff0000; color: #ffe600;"><b>Ativar alto-contraste</b></button>
+          <a class="text-decoration-underline text-2" style="cursor: pointer;" onclick="desativacontraste(); window.location.reload();"><p class="text-center">Desativar alto-contraste</p></a>
+        </div>
+        <div class="modal-footer border-2 bc-2">
+          <button type="button" class="btn btn-glass float-end" onclick="desativamodal()" data-bs-dismiss="modal">Navegar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <nav class="navbar fixed-top fw-300 navbar-expand-lg" style="z-index: 1300;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="/img/icon-glass.png" class="logo" alt="Logotipo Dicenders"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown m-2">
+            <a href="/cadastro">
+            <div class="bg-5 profile row mx-0 rounded-5 container">
+                <button type="submit" class="btn text-2">Cadastre-se</button>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+      <section class="bg-image first-sec">
+        <div class="module" style="border-radius: 0;">
+          <img src="/img/tituloindex.png" class="position-relative top-50 start-50 translate-middle text-index w-100" alt="A imagem possui apenas o nome 'Dicenders' escrito em caixa-alta">
+            <div class="armad" id="tatu1"></div>
+            <div class="armad" id="tatu2"></div>
+            <div class="armad" id="tatu3"></div>
+            <div class="armad" id="tatu4"></div>
+            <div class="armad" id="tatu5"></div>
+            <div class="armad" id="tatu6"></div>
+            <div class="onda" id="onda1"></div>
+            <div class="onda" id="onda2"></div>
+            <div class="onda" id="onda3"></div>
+            <div class="onda" id="onda4"></div>
+        </div>
+      </section>
+      <section class="container-fluid">
+        <div class="m-5">
+            <h1 class="text-center text-transition text-clean my-5 fw-600">Algumas funções que nos tornam a melhor mesa para você:</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 my-5">
+                    <img src="img/i_img_1.svg" width="100%" class="align-image box-image" alt="...">
+                </div>
+                <div class="col-md-6 fw-400 my-5">
+                    <div class="mx-5 align-center position-relative" style="top:25%;">
+                        <p class="text-transition text-clean" style="text-align: center;">Faça parte das suas comunidades <b class="text-2">favoritas</b> dentro de uma rede social <b class="text-2">exclusiva</b>.</p>
+                    </div>
+                    <div class="align-center position-relative" style="top:25%;">
+                      <a href="/cadastro">
+                        <button type="submit" class="btn btn-primary btn-glass align-center w-50" style="width: 75%;">Cadastre-se</button>
+                      </a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+      </section>
+      <section class="container-fluid bg-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 fw-400 my-5">
+                <div class="mx-5 align-center position-relative" style="top:25%;">
+                    <p class="text-transition text-clean" style="text-align: center;">Coordene <b class="text-2">suas mesas</b> e fique por dentro das postagens <b class="text-2">mais relevantes</b> para você.</p>
+                </div>
+                <div class="align-center position-relative" style="top:25%;">
+                  <a href="/cadastro">
+                    <button type="submit" class="btn btn-primary btn-white align-center w-50" style="width: 75%;">Cadastre-se</button>
+                  </a>
+                </div>
+            </div>
+            <div class="col-md-6 my-5">
+                <img src="img/i_img_2.svg" width="100%" class="align-image box-image-dir" alt="...">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container-fluid">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 my-5">
+                  <img src="img/i_img_3.svg" width="100%" class="align-image box-image" alt="...">
+              </div>
+              <div class="col-md-6 fw-400 my-5">
+                  <div class="mx-5 align-center position-relative" style="top:25%;">
+                      <p class="text-transition text-clean" style="text-align: center;"><b class="text-2"> Compartilhe dicas</b> com seus amigos e conheça <b class="text-2">novos jogadores</b> para sua campanha.</p>
+                  </div>
+                  <div class="align-center position-relative" style="top:25%;">
+                    <a href="/cadastro">
+                      <button type="submit" class="btn btn-primary btn-glass align-center w-50" style="width: 75%;">Cadastre-se</button>
+                    </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </section>
+      <section class="container-fluid bg-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 fw-400 my-5">
+                <div class="mx-6 align-center position-relative" style="top:25%;">
+                    <p class="text-transition text-clean" style="text-align: center;">Use a <b class="text-2"> imaginação</b> e as muitas <b class="text-2">ferramentas a seu dispor</b> para criar <b class="text-2">campanhas incriveis</b>.</p>
+                </div>
+                <div class="align-center position-relative" style="top:25%;">
+                  <a href="/cadastro">
+                    <button type="submit" class="btn btn-primary btn-white align-center w-50" style="width: 75%;">Cadastre-se</button>
+                  </a>
+                </div>
+            </div>
+            <div class="col-md-6 my-5">
+                <img src="img/i_img_4.svg" width="100%" class="align-image box-image-dir" alt="...">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container-fluid">
+        <div class="container">
+          <div class="row my-5">
+            <div class="col-md-5 fw-400 my-5">
+              <div class="card bg-card-lend card-lend text-clean p-2 mx-3 position-relative align-center" style="width: 18rem;">
+                <div class="card-body position-absolute top-10">
+                  <h5 class="card-title fs-4 text-center">Crie uma conta gratuita</h5>
+                  <i class="bi-people card-text text-2 align-image fs-1 my-3"></i>
+                  <p class="card-text text-clean fs-5 text-center">e convide os seus amigos para se divertirem juntos.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 fw-400 my-5">
+              <div class="mx-6 align-center position-relative" style="top:25%;">
+                <p class="text-transition" style="text-align: center;">ou</p>
+              </div>
+            </div>
+            <div class="col-md-5 my-5">
+              <div class="card bg-card-lend card-lend text-clean p-0 mx-3 position-relative align-center" style="width: 18rem;">
+                <div class="card-body p-4 position-absolute top-5">
+                  <h5 class="card-title fs-4 text-center">Assine o plano pago</h5>
+                  <i class="bi-coin card-text text-2 align-image fs-1 my-3"></i>
+                  <p class="card-text text-clean fs-5 text-center">e ganhe previlégios que deixarão o jogo mais divertido.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-top-foot-index">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 my-5">
+
+                </div>
+                <div class="col-md-4 my-5 position-relative">
+                    <p class="card-text text-clean fw-600 login text-center dice-border position-relative" style="z-index: 2; top: 40%;">Jogue com Dicenders®</p>
+                    <img src="img/001.svg" class="align-image mb-6 w-50" alt="...">
+                </div>
+                <div class="col-md-4 my-5">
+
+              </div>
+            </div>
+        </div>
+        <div class="card footer-card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-4 px-4 pt-2">
+                <div class="icon-footer text-transition">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div class="position-absolute top-50">
+                  <h4 class="text-post">© 2023 Dicenders Corp.</h4>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="index-lists text-post">
+                  <ul class="pages-list">
+                    <li>Menu</li>
+                    <li>Início</li>
+                    <li>Social</li>
+                    <li>Loja</li>
+                  </ul>
+                  <ul class="index-options-list">
+                    <li>Suporte</li>
+                    <li>Ajuda & FAQ</li>
+                    <li>Privacidade</li>
+                    <li>Termos de uso</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4 pt-2">
+                <h1 class="text-transition">Jogue RPG como nunca jogou.</h1>
+                <div class="parent">
+                  <input type="text" class="input-contato" placeholder="Fale conosco" aria-label="Contact footer area">
+                  <i class="bi-arrow-right-short login" id="arrowInput"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<script>
+//primeira vez que se entra no site
+function lerfirsttry(){
+  if(!localStorage.getItem("firstTry")){
+    localStorage.setItem('firstTry', 0);
+  }
+}
+
+lerfirsttry();
+
+if(localStorage.getItem("firstTry")== 0){
+    document.getElementById("buttonModal").click();
+    localStorage.setItem('vlibras', "enabled");
+}
+
+function desativamodal(){
+  localStorage.setItem('firstTry', 1);
+}
+
+function ativacontraste(){
+  localStorage.setItem('altocontrasteativo', 'altocontrast');
+  document.getElementById("html").setAttribute('colormodel', localStorage.getItem("altocontrasteativo"));
+}
+
+function desativacontraste(){
+    localStorage.setItem('altocontrasteativo', 'default');
+}
+
+//parallax
+var onda1 = document.getElementById('onda1');
+var onda2 = document.getElementById('onda2');
+var onda3 = document.getElementById('onda3');
+var onda4 = document.getElementById('onda4');
+var navbar = document.querySelector("nav");
+var navbarcontent = document.getElementById('navbarNavDropdown');
+var tatu1 = document.getElementById('tatu1');
+var tatu2 = document.getElementById('tatu2');
+var tatu3 = document.getElementById('tatu3');
+var tatu4 = document.getElementById('tatu4');
+var tatu5 = document.getElementById('tatu5');
+var tatu6 = document.getElementById('tatu6');
+const boxesEsq = document.querySelectorAll('.box-image');
+const boxesDir = document.querySelectorAll('.box-image-dir');
+
+window.addEventListener('scroll', checkbox);
+  checkbox();
+
+  function checkbox(){
+    const triggerBottom = window.innerHeight / 5 * 4;
+    boxesEsq.forEach((box, idx) => {
+      const boxTop = box.getBoundingClientRect().top;
+
+      if(boxTop < triggerBottom){
+        box.classList.add('show');
+
+      } else{
+        box.classList.remove('show');
+      }
+    })
+
+    boxesDir.forEach((box, idx) => {
+    const boxTop = box.getBoundingClientRect().top;
+
+    if(boxTop < triggerBottom){
+      box.classList.add('show');
+
+    } else{
+      box.classList.remove('show');
+    }
+  })
+}
+window.addEventListener('scroll', () =>{
+  var rolagemPos = window.scrollY;
+
+  if(rolagemPos == 0){
+    navbar.classList.remove("bg-3");
+    navbarcontent.classList.remove("navbar-collapse");
+    tatu1.style.translate = 0 + 'px';
+    tatu2.style.translate = 0 + 'px';
+    tatu3.style.translate = 0 + 'px';
+    tatu4.style.translate = 0 + 'px';
+    tatu5.style.translate = 0 + 'px';
+    tatu6.style.translate = 0 + 'px';
+  } else{
+  navbar.classList.add("bg-3");
+  navbarcontent.classList.add("navbar-collapse");
+  onda1.style.backgroundPositionX = 400 + rolagemPos * 4 + 'px';
+  onda2.style.backgroundPositionX = 300 + rolagemPos * -4 + 'px';
+  onda3.style.backgroundPositionX = 200 + rolagemPos * 2 + 'px';
+  onda4.style.backgroundPositionX = 100 + rolagemPos * -2 + 'px';
+  tatu1.style.translate = 600 + rolagemPos * -4 + 'px';
+  tatu2.style.translate = 500 + rolagemPos * -3 + 'px';
+  tatu3.style.translate = 400 + rolagemPos * -2 + 'px';
+  tatu4.style.translate = 300 + rolagemPos * 2 + 'px';
+  tatu5.style.translate = 200 + rolagemPos * 3 + 'px';
+  tatu6.style.translate = 100 + rolagemPos * 4 + 'px';
+  }
+
+  if(rolagemPos >= 600){
+    tatu1.style.display = 'none';
+    tatu2.style.display = 'none';
+    tatu3.style.display = 'none';
+    tatu4.style.display = 'none';
+    tatu5.style.display = 'none';
+    tatu6.style.display = 'none';
+  } else{
+    tatu1.style.display = 'block';
+    tatu2.style.display = 'block';
+    tatu3.style.display = 'block';
+    tatu4.style.display = 'block';
+    tatu5.style.display = 'block';
+    tatu6.style.display = 'block';
+  }
+
+})
+</script>
+</body>

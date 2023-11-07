@@ -1,0 +1,151 @@
+    <body class="bg-4 bg-image inter-font" onload="document.getElementById('reg_username').focus()" theme-dicender=default>
+    
+    <div class="container">
+        <div class="position-absolute top-50 start-50 translate-middle" style="width: 50%;">
+            <div class="card bg-glass text-2 mb-3 text-center">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h1 class="mb-5 login oswald-font fw-400">Identidade</h1>
+                            <form id="form-cadastro" action="/cadastro/new2" encType="multipart/form-data" method='POST' autocomplete="off" onsubmit="return checkform( this ) ; ">
+                                <div class="mb-3">
+                                    <input type="text" minlength="4" maxlength="30" class="form-control bg-glass text-2 bs-0" id="reg_username" name="username" autocomplete="off" aria-describedby="UsernameHelp" placeholder="Nome de exibição">
+                                    <p id="textUser" class="mt-2"></p>
+                                </div>
+                                <div class="parent mb-5">
+                                    <input type="text" minlength="4" maxlength="15" class="form-control bg-glass text-2 bs-0" id="reg_usertag" name="usertag" autocomplete="off" aria-describedby="UsertagHelp" placeholder="Nome_de_usuário" style="padding-left: 2rem;">
+                                    <i class="bi-at fs-5" id="at"></i>
+                                </div>
+                                <p id="textTag" class="mt-1"></p>
+                                <div>
+                                    <p id="textSenha" class="mt-2 text-center"></p> 
+                                </div>
+                                <div>
+                                    <p id="textConfirmSenha" class="mt-2 text-center"></p> 
+                                </div>
+                                <span class="p-1">
+                                </span>
+                                <div class="mb-3 mt-3">
+                                <button type="submit" name="submit" id="cardBtn" class="btn btn-primary btn-glass w-100" onclick="cadastrar(document.getElementById('reg_email'));">Cadastrar</button>
+                                </div>
+                                <div class="mb-0">
+                                    <a href="#" class="text-2 fs-foot">Termos de uso</a>
+                                    <a href="#" class="text-2 fs-foot">Privacidade</a>
+                                    <a href="#" class="text-2 fs-foot">Fale conosco</a>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="col-md-6" style="border-left: 1px var(--bs-color-2) solid;">
+                                <div class="card-body">
+
+                                <h1 class="text-start text-transition oswald-font fw-500">Escolha uma foto de perfil</h1>
+                                <p class="text-start mb-0 text-2 fw-400">Ou ignore por enquanto não carregando nenhuma imagem.</p>
+                                <div class="p-3 align-center parent">
+                                    <div class="image-upload">
+                                        <label for="uploadImage">
+                                            <span class="position-absolute translate-middle" id="cam"><i class="bi-camera" ></i></span>
+                                        </label>  
+                                        <input name="arquivo" id="uploadImage" aria-label="upload image input" type="file" accept="image/png, image/jpeg">
+                                    </div>
+                                    <div class="align-center position-relative rounded-circle cadastro-image">
+                                        <img style="width: 100%; height: 100%; object-fit: cover;" class="position-absolute align-center rounded-circle" src="/img/profile-icon.jpg" id="imageSelected" alt="Imagem de perfil escolhida inicialmente"> 
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</body>
+<script src="/js/profileimg.js"></script>
+<script language="javascript">
+        /*
+        function checkform( frm )
+        {
+            
+            var username = document.getElementById('reg_username').value;
+            var user = frm.usertag.value;
+            if(!username){
+            //alert('O username é obrigatório.');
+            document.getElementById('textUser').classList.add("text-danger");
+            document.getElementById('textUser').innerHTML = "O username é obrigatório.";
+            document.getElementById('reg_username').focus();
+            } else{
+                document.getElementById('textUser').innerHTML = "";
+            }
+            if ( user.search( /\s/g ) != -1 || user.search( "@" ) != -1 )
+            {
+                document.getElementById('textTag').classList.add("text-danger");
+                document.getElementById('textTag').innerHTML= "Não é permitido espaços em branco ou @.";
+                user = user.replace( "@" , "" );
+                user = user.replace( /\s/g , "" );
+                document.getElementById('reg_usertag').focus();
+            } else{
+                document.getElementById('textTag').innerHTML = "";
+            }	
+            if ( document.getElementById('textTag').innerHTML != "")
+            {
+                frm.usertag.value = user;
+                return false ;
+            }
+            return true ;	
+        }
+        */
+    const err = {{errStatus}}
+
+
+    if(err == 303){
+        
+        //Alerta de Username inexistente
+        document.getElementById('textUser').classList.add("text-danger");
+        document.getElementById('textUser').innerHTML = "O nome de exibição é obrigatório.";
+        document.getElementById('reg_username').focus();
+    }
+    else if (err == 304){
+        
+        //Alerta de usertag inexistente
+        document.getElementById('textTag').classList.add("text-danger");
+        document.getElementById('textTag').innerHTML= "O nome de usuário é obrigatório.";
+        document.getElementById('reg_usertag').focus();
+
+    }
+    else if (err == 305){
+        
+        user = document.getElementById("reg_usertag").value;
+
+        //Alerta de senha inexistente
+        document.getElementById('textTag').classList.add("text-danger");
+        document.getElementById('textTag').innerHTML= "Não é permitido espaços em branco ou @ no nome de usuário.";
+        user = user.replace( "@" , "" );
+        user = user.replace( /\s/g , "" );
+        document.getElementById('reg_usertag').focus();
+    }
+    else if (err == 306){
+        
+
+        //Alerta de arquivo muito grande
+        document.getElementById('textTag').classList.add("text-danger");
+        document.getElementById('textTag').innerHTML= "Apenas aceitamos arquivos JPG/JPEG OU PNG.";
+        document.getElementById('reg_usertag').focus();
+    }
+    else if (err == 307){
+        
+
+        //Alerta de arquivo muito grande
+        document.getElementById('textTag').classList.add("text-danger");
+        document.getElementById('textTag').innerHTML= "O arquivo enviado é grande demais! Limite: 2MB";
+        document.getElementById('reg_usertag').focus();
+    }
+    else if (err == 308){
+        
+
+        //Alerta de arquivo muito grande
+        document.getElementById('textTag').classList.add("text-danger");
+        document.getElementById('textTag').innerHTML= "Ocorreu um erro ao enviar o arquivo de imagem. Tente novamente mais tarde.";
+        document.getElementById('reg_usertag').focus();
+    }
+    
+
+    </script>

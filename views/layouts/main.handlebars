@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/css/bootstrap-utilities.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!--Icones-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/0a499b0846.js" crossorigin="anonymous"></script>
+        
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+        
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/img/001padrao.png" type="image/x-icon">
+    <script src="/js/code.js" defer></script>
+    <script src="/js/colors.js" defer></script>
+    <script src="/js/bootstrap.bundle.js"></script> 
+    <script src="/js/cfigcontent.js" defer></script> 
+    <script src="/js/strongcheck.js"></script>      
+    <script src="/js/postmodal.js" defer></script>
+    <script src="/js/sliders.js" defer></script>
+    <script src="/js/clock.js" defer></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.295/build/spline-viewer.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{title}}</title>
+</head>
+<body>
+    {{{body}}}
+    <div vw class="" id="vlibras">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+      function lerlibras(){
+        document.getElementById("vlibras").classList.remove("enabled");
+                document.getElementById("vlibras").classList.remove("disabled");
+        document.getElementById("vlibras").classList.add(localStorage.getItem('vlibras'));
+      }
+
+      lerlibras()
+    </script>
+</body>
+</html>
