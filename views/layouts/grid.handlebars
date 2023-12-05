@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/bootstrap-grid.css">
     <link rel="stylesheet" href="/css/bootstrap-utilities.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/gridcss/style.css" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,11 +46,15 @@
     <script src="/js/gridjs/controls.js"></script>
     <script src="/js/gridjs/dragdiv.js"></script>
     <script src="/js/gridjs/gridColor.js"></script>
+    <script src="/js/gridjs/dados.js"></script>
     <script src="/socket.io/socket.io.js"></script>
 
     <script>
-      const gridMap = {{{grid}}};
-      loadInit(gridMap)
+      const usertag = `{{usertag}}`
+      const gridMap = {{{grid}}}
+      if(gridMap != ""){
+        loadInit(gridMap)
+      }
 
       const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
       const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))

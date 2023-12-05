@@ -18,6 +18,7 @@ document.getElementById("sendToBackButton").addEventListener("click", function()
   var activeObject = canvas.getActiveObject();
   if (activeObject) {
     sendToBack(activeObject);
+    emitMod(activeObject, canvas.getActiveObjects().map(obj => canvas.getObjects().indexOf(obj)))
   }
 });
 
@@ -25,5 +26,6 @@ document.getElementById("bringToFrontButton").addEventListener("click", function
   var activeObject = canvas.getActiveObject();
   if (activeObject) {
     bringToFront(activeObject);
+    emitMod(activeObject, canvas.getActiveObjects().map(obj => canvas.getObjects().indexOf(obj)))
   }
 });

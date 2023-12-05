@@ -103,7 +103,8 @@ canvas.on("object:moving", function (options) {
       top: Math.round((options.target.top - 25) / 50) * 50 + 25,
     });
   }
-  emitMod(canvas.getActiveObject(), canvas.getActiveObjects().map(obj => canvas.getObjects().indexOf(obj)));
+  console.log(options.target.selected);
+  emitMod(canvas.getActiveObject(), canvas.getActiveObjects().map(obj => canvas.getObjects().indexOf(obj)), usertag);
 });
 
 /**
@@ -127,7 +128,10 @@ canvas.on("object:scaling", function (options) {
 });
 
 canvas.on("object:rotating", function (options) {
-  emitMod(canvas.getActiveObject()._objects, canvas.getActiveObjects().map(obj => canvas.getObjects().indexOf(obj)));
+  if (options.target.angle % 45 <= 10 || options.target.angle % 45 >= 35) {
+    options.target.rotate(Math.round(options.target.angle / 45) * 45);
+  }
+  emitMod(canvas.getActiveObject(), canvas.getActiveObjects().map(obj => canvas.getObjects().indexOf(obj)));
 });
 
 canvas.on("object:modified", function (options) {
@@ -220,16 +224,18 @@ var index = 0,
  */
 document.addEventListener("keydown", function (event) {
   if (event.key === "Delete") {
-    emitDel(canvas.getActiveObjects())
-    canvas.remove(...canvas.getActiveObjects());
+    var delObject = canvas.getActiveObjects()
+    canvas.remove(...delObject);
+    emitDel(delObject)
     canvas.discardActiveObject().renderAll();
   }
 });
 
 var deleteButton = document.getElementById("deleteob");
 deleteButton.addEventListener("click", function () {
-  emitDel(...canvas.getActiveObjects())
-  canvas.remove(...canvas.getActiveObjects());
+  var delObject = canvas.getActiveObjects()
+  canvas.remove(...delObject);
+  emitDel(delObject)
   canvas.discardActiveObject().renderAll();
 });
 

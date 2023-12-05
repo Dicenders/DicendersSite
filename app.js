@@ -21,9 +21,11 @@ const { SocketAddress } = require("net");
 const server = http.createServer(app)
 require("./models/Message")
 require("./models/Grid")
+require("./models/Usuario")
 const Message = mongoose.model("messages")
 const Post = mongoose.model("posts")
 const Grid = mongoose.model("grids")
+const Usuario = mongoose.model("usuarios")
 // const Grid = mongoose.model("grids")
 
 //Config
@@ -73,11 +75,6 @@ const Grid = mongoose.model("grids")
 
 //Servidores
 
-/*
-       Message.deleteMany().then(() => {
-          console.log("Mensagens apagadas com sucesso!")
-        })
-*/
     const io = new Server(server, {
         maxHttpBufferSize: 5242880, pingTimeout: 60000
     })
@@ -133,8 +130,8 @@ const Grid = mongoose.model("grids")
 
             await Grid.updateOne({id: link}, {conteudo: JSON.stringify(fullGrid)})
         })
-        socket.on('modgrid', async (data, indexR, fullGrid) => {
-            socket.broadcast.to(link).emit('modgrid', data, indexR)
+        socket.on('modgrid', async (data, indexR, user) => {
+            socket.broadcast.to(link).emit('modgrid', data, indexR, user)
         })
 
         socket.on('delgrid', async (data, fullGrid) => {
@@ -149,6 +146,7 @@ const Grid = mongoose.model("grids")
             await Grid.updateOne({id: link}, {conteudo: JSON.stringify(fullGrid)})
         })
          socket.on('lastMod', async (fullGrid) => {
+            socket.broadcast.to(link).emit('lastMod')
             console.log("Grid atualizado com sucesso.");
             await Grid.updateOne({id: link}, {conteudo: JSON.stringify(fullGrid)})
          })

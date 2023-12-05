@@ -1,50 +1,72 @@
 <body>
-<div id="journalpage" class="buttons d-none">
+<div id="journalpage" class="bg-grid btn-grid d-none">
   <div id="journalheader">
-    <button type="button" id="closeDiv" class="float-end"><i class="bi-x-lg"></i></button>
+    <button type="button" id="closeDiv" class="float-end btn-grid"><i class="bi-x-lg"></i></button>
   </div>
   <p>A janela de fichas ainda está em desenvolvimento</p>
   <img src="/img/001.svg" width="100%" alt="Logotipo Dicenders">
 </div>
 
-<div id="chatpage" class="buttons d-none">
+<div id="chatpage" class="bg-grid d-none">
   <div id="chatheader">
-    <button type="button" id="closeDiv" class="float-end"><i class="bi-x-lg"></i></button>
+    <button type="button" id="closeDiv" class="float-end btn-grid"><i class="bi-x-lg"></i></button>
   </div>
   <p>A janela de chat ainda está em desenvolvimento</p>
   <img src="/img/001.svg" width="100%" alt="Logotipo Dicenders">
 </div>
 
-<div id="dicepage" class="buttons d-none">
+<div id="dicepage" class="bg-grid btn-grid flex-column d-none" style="width: 30vw;">
   <div id="diceheader">
-    <button type="button" id="closeDiv" class="float-end"><i class="bi-x-lg"></i></button>
+    <button type="button" id="closeDiv" class="float-end btn-grid"><i class="bi-x-lg"></i></button>
   </div>
-  <p>A janela de dados ainda está em desenvolvimento</p>
-  <img src="/img/001.svg" width="100%" alt="Logotipo Dicenders">
+  <div class="container-fluid position-relative text-clean text-dm" style="height: 100%;">
+      <div id="dices" class="d-flex justify-content-around my-2">
+        <button type="submit" class="btn-grid text-soft-ldm text-center" style="width: 2.4rem;" value="4">4</button>
+        <button type="submit" class="btn-grid text-soft-ldm text-center" style="width: 2.4rem;" value="6">6</button>
+        <button type="submit" class="btn-grid text-soft-ldm text-center" style="width: 2.4rem;" value="8">8</button>
+        <button type="submit" class="btn-grid text-soft-ldm text-center" style="width: 2.4rem;" value="10">10</button>
+        <button type="submit" class="btn-grid text-soft-ldm text-center" style="width: 2.4rem;" value="12">12</button>
+        <button type="submit" class="btn-grid text-soft-ldm text-center" style="width: 2.4rem;" value="20">20</button>
+        <button type="submit" class="btn-grid text-soft-ldm text-center" style="width: 2.4rem;" value="100">100</button>
+    </div>
+    <hr>
+        <p id="dNum" class="text-ldm text-break">Clique em um dos valores acima</p>
+        <hr>
+        <button type="submit" class="btn-grid" style="width: 4rem !important:" id="bonus" onclick="som()"><i class="bi-plus"></i></button>
+        <p id="visualBonus" class="text-ldm text-break">Seu bônus fica aqui</p>
+        <button type="submit" class="btn-grid" style="width: 4rem !important:" id="onus" onclick="sub()"><i class="bi-dash"></i></button>
+    <hr class="my-2">
+    <p id="result" class="text-ldm text-break">Resultado</p>
+    <p id="soma" class="text-ldm text-break">Soma</p>
+    <button type="submit" class="btn-grid text-ldm" onclick="roll()">Roll</button>
+    <button type="submit" class="btn-grid text-ldm" onclick="clearS()">Clear</button>
+  </div>
 </div>
 
-<div id="notespage" class="buttons d-none">
+<div id="notespage" class="bg-grid btn-grid d-none">
   <div id="notesheader">
-    <button type="button" id="closeDiv" class="float-end"><i class="bi-x-lg"></i></button>
+    <button type="button" id="closeDiv" class="btn-grid float-end"><i class="bi-x-lg"></i></button>
   </div>
   <p>A janela de notas ainda está em desenvolvimento</p>
   <img src="/img/001.svg" width="100%" alt="Logotipo Dicenders">
 </div>
-
-    <div class="buttons l-2 t-5 flex-row">
-      <button class="m-1" onclick="window.location.href='/home'"><img src="/img/001.svg" alt=""></button>
-      <button class="m-1"><i class="bi-person" style="font-size: 1.5rem;"></i></button>
-      <button class="m-1" id="optChevron"><i class="bi-chevron-down" style="font-size: 1.5rem;"></i></button>
+<h1 id="moving" style="z-index: 999; max-width:100px; word-break:break-all;" class="text-clean position-absolute text-ldm bg-grid p-1 mb-0 rounded-3 ms-1 d-none">QUAL FOI</h1>
+    <div class="position-absolute">      
+      <div class="bg-grid btn-grid d-flex position-relative m-3 flex-row">
+        <button class="m-1 btn-grid p-2" onclick="window.location.href='/home'"><img src="/img/001.svg" alt=""></button>
+        <button class="m-1 btn-grid p-2"><i class="bi-person" style="font-size: 1.5rem;"></i></button>
+        <button class="m-1 btn-grid p-2" id="optChevron"><i class="bi-chevron-down" style="font-size: 1.5rem;"></i></button>
+      </div>
+      <div class="bg-grid btn-grid d-flex position-relative m-3 flex-row d-none top-0" id="optButtons">
+        <button class="m-1 btn-grid" id="journalbtn"><i class="bi-journal"></i></button>
+        <button class="m-1 btn-grid" id="chatbtn"><i class="bi-chat-right-dots-fill"></i></button>
+        <button class="m-1 btn-grid" id="diceBtn"><i class="fa-solid fa-dice-d20"></i></button>
+        <button class="m-1 btn-grid" id="notesbtn"><i class="bi-stickies-fill"></i></button>
+      </div>
     </div>
-    <div class="buttons l-2 t-10 flex-row d-none" id="optButtons">
-      <button class="m-1" id="journalbtn"><i class="bi-journal"></i></button>
-      <button class="m-1" id="chatbtn"><i class="bi-chat-right-dots-fill"></i></button>
-      <button class="m-1" id="diceBtn"><i class="fa-solid fa-dice-d20"></i></button>
-      <button class="m-1" id="notesbtn"><i class="bi-stickies-fill"></i></button>
-    </div>
-    <div class="buttons r-2 t-5">
+    <div class="bg-grid btn-grid position-fixed d-flex end-0 my-4 mx-3 flex-column">
       <div class="dropdown">
-        <button class="d-flex justify-content-center" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false" style="min-width: 50px !important;"><i class="bi-chevron-down"></i></button>
+        <button class="d-flex btn-grid p-2 justify-content-center" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false" style="min-width: 50px !important;"><i class="bi-chevron-down"></i></button>
         <ul class="dropdown-menu dropmenu-buttons">
           <li>
             <button class="bi-plus-lg" id="addnew" data-bs-toggle="popover" data-bs-custom-class="custom-popover" data-bs-trigger="hover" data-bs-placement="left" data-bs-content="Criar elemento"></button>
@@ -59,7 +81,7 @@
             <button class="bi-upload" id="load" data-bs-toggle="popover" data-bs-custom-class="custom-popover" data-bs-trigger="hover" data-bs-placement="left" data-bs-content="Carregar"></button>
           </li>
           <li>
-              <input type="checkbox" id="dragmode" name="dragmode">
+              <input type="checkbox" id="dragmode" name="dragmode" class="d-none">
               <label for="dragmode" id="draglabel" class="bi-cursor-fill" data-bs-toggle="popover" data-bs-custom-class="custom-popover" data-bs-trigger="hover" data-bs-placement="left" data-bs-content="Arrastar tabuleiro"></label>
           </li>
           <li>
@@ -74,9 +96,9 @@
       </div>
     </div>
 
-    <div class="buttons l-2 b-5">
+    <div class="bg-grid btn-grid rounded-3 position-fixed d-flex bottom-0 m-3 l-2 b-5">
       <div class="dropdown">
-        <button class="d-flex justify-content-center" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false"><i class="bi-three-dots-vertical"></i></button>
+        <button class="d-flex btn-grid rounded-3 border-0 justify-content-center" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false"><i class="bi-three-dots-vertical"></i></button>
         <ul class="dropdown-menu dropmenu-buttons">
           <li id="lineW" data-bs-toggle="popover" data-bs-custom-class="custom-popover" data-bs-trigger="hover" data-bs-placement="right" data-bs-content="Linhas claras">
             <span></span>
@@ -176,9 +198,9 @@
 
             dicebtn.addEventListener("click", () => {
         if(dicediv.classList.contains("d-none")){
-          dicediv.classList.remove("d-none");
+          dicediv.classList.replace("d-none", "d-flex");
         } else{
-          dicediv.classList.add("d-none");
+          dicediv.classList.replace("d-flex", "d-none");
         }
       })
 

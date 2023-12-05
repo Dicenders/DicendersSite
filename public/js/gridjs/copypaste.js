@@ -21,12 +21,22 @@ function Paste() {
             // active selection needs a reference to the canvas.
             clonedObj.canvas = canvas;
             clonedObj.forEachObject(function (obj) {
+                const id = Date.now().toString(16) + Math.floor(Math.random() * 9999999);
+                obj.set({
+                    id: id,
+                });
                 canvas.add(obj);
+                emitAdd(obj)
             });
             // this should solve the unselectability
             clonedObj.setCoords();
         } else {
+            const id = Date.now().toString(16) + Math.floor(Math.random() * 9999999);
+            clonedObj.set({
+                id: id,
+            });
             canvas.add(clonedObj);
+            emitAdd(clonedObj)
         }
         _clipboard.top += 10;
         _clipboard.left += 10;

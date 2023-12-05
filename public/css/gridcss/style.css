@@ -1,4 +1,4 @@
-body {
+/*body {
   font-family: arial, sans-serif;
   flex-direction: column;
   margin: 0;
@@ -6,7 +6,7 @@ body {
 }
 
 .buttons {
-  background-color: rgba(101, 22, 123, 0.7); /* Cor de fundo com 50% de opacidade */
+  background-color: rgba(101, 22, 123, 0.7);  //Cor de fundo com 50% de opacidade 
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -59,7 +59,7 @@ ul{
   font-size: 1.5rem;
   background: none;
   border: none;
-  color: rgba(255, 255, 255, 0.9); /* Cor do texto com 50% de opacidade */
+  color: rgba(255, 255, 255, 0.9); // Cor do texto com 50% de opacidade 
   cursor: pointer;
 }
 
@@ -70,7 +70,7 @@ ul{
 .file-button {
   position: relative;
   padding: 0.5rem;
-  color: rgba(255, 255, 255, 0.9); /* Cor do texto com 50% de opacidade */
+  color: rgba(255, 255, 255, 0.9); //Cor do texto com 50% de opacidade 
   border: none;
   border-radius: 5px;
   font-size: 1.5rem;
@@ -98,11 +98,12 @@ ul{
 .popover-arrow, .popover-arrow::after, .popover-arrow::before{
   display: none !important;
 }
+*/
 
 #contextMenu {
   position: absolute;
-  background-color: rgba(116, 57, 165, 0.9); /* Cor de fundo com 50% de opacidade */
-  color: rgba(255, 255, 255, 0.9); /* Cor do texto com 50% de opacidade */
+  background-color: rgba(116, 57, 165, 0.9); /*Cor de fundo com 50% de opacidade*/ 
+  color: rgba(255, 255, 255, 0.9); /*Cor do texto com 50% de opacidade*/ 
   border: none;
   padding: 6px;
   z-index: 9999;
@@ -130,10 +131,10 @@ ul{
 #contextMenu li:last-child {
   border-right: none;
 }
-
+/*
 #dragmode {
   display: none;
-}
+}*/
 
 #journalpage, #chatpage, #dicepage, #notespage {
   position: absolute;
@@ -142,7 +143,11 @@ ul{
   color: #fff;
   top: 35%;
   left: 2%;
+  border: rgb(27, 27, 27, 0.8) 2px solid;
   text-align: center;
+  padding: 10px;
+  height: 70%;
+  overflow-y: auto;
 }
 
 #journalheader, #chatheader, #diceheader, #notesheader {

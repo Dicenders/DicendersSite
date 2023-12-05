@@ -1,5 +1,5 @@
 //switch das cores
-var descendentes = document.querySelectorAll("#colorList a");
+var descendentes = document.querySelectorAll("#colorList a"); 
 var dft = "default"
 const lightdft = document.getElementById("lightCheck");
 var lightmode = false;

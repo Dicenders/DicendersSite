@@ -203,166 +203,34 @@
               </div>
               <div class="modal-footer border-2 bc-2">
                 <button type="button" class="btn btn-white" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-glass" onclick="window.location.href='/grid';">Estou pronto</button>
+                <form action="/grid/new" method="POST">
+                <button type="submit" class="btn btn-glass" onclick="">Estou pronto</button>
+                </form>
               </div>
             </div>
           </div>
         </div>
-
         <div class="c-menu bg-4">
           <div class="row wrap-map">
             <i id="wrapLeft" class="bi-chevron-compact-left wrap-i"></i>
             <ul id="wrapcar" class="wrap_car-map">
+              {{#each grids}}
               <li class="wrap_card-map">
                 <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
                   <img src="img/bg_sign.svg" class="card-img-top img-card-menu" alt="...">
+                  <a href='/grid/{{id}}'>
                   <div class="card-body ">
-                    <h5 class="card-title title-limit">Card title Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque!</h5>
-                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5 class="card-title title-limit">{{id}}</h5>
+                    <p class="card-text card-limit my-0"></p></a>
                     <div class="text-center m-1">                
-                      <div class=" mt-3">
-                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
-                      </div>
                     </div>
-
+        
                   </div>
                 </div>
               </li>
-              <li class="wrap_card-map">
-                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
-                  <img src="img/bg_sign.svg" class="card-img-top img-card-menu" alt="...">
-                  <div class="card-body ">
-                    <h5 class="card-title title-limit">Card title</h5>
-                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text</p>
-                    <div class="text-center m-1">                
-                      <div class=" mt-3">
-                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
-                      </div>
-                    </div>
+              {{else}}
 
-                  </div>
-                </div>
-              </li>
-              <li class="wrap_card-map">
-                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
-                  <img src="img/bg_sign.svg" class="card-img-top img-card-menu" alt="...">
-                  <div class="card-body ">
-                    <h5 class="card-title title-limit">Card title</h5>
-                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="text-center m-1">                
-                      <div class=" mt-3">
-                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </li>
-              <li class="wrap_card-map">
-                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
-                  <img src="img/bg_sign.svg" height="186px" class="card-img-top img-card-menu" alt="...">
-                  <div class="card-body ">
-                    <h5 class="card-title title-limit">Card title</h5>
-                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="text-center m-1">                
-                      <div class=" mt-3">
-                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </li>
-              <li class="wrap_card-map">
-                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
-                  <img src="img/bg_sign.svg" class="card-img-top img-card-menu" alt="...">
-                  <div class="card-body ">
-                    <h5 class="card-title title-limit">Card title</h5>
-                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="text-center m-1">                
-                      <div class=" mt-3">
-                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </li>
-              <li class="wrap_card-map">
-                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
-                  <img src="img/bg_sign.svg" class="card-img-top img-card-menu" alt="...">
-                  <div class="card-body ">
-                    <h5 class="card-title title-limit">Card title</h5>
-                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="text-center m-1">                
-                      <div class=" mt-3">
-                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </li>
-              <li class="wrap_card-map">
-                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
-                  <img src="img/bg_sign.svg" class="card-img-top img-card-menu" alt="...">
-                  <div class="card-body ">
-                    <h5 class="card-title title-limit">Card title</h5>
-                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="text-center m-1">                
-                      <div class=" mt-3">
-                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </li>
-              <li class="wrap_card-map">
-                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
-                  <img src="img/bg_sign.svg" class="card-img-top img-card-menu" alt="...">
-                  <div class="card-body ">
-                    <h5 class="card-title title-limit">Card title</h5>
-                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="text-center m-1">                
-                      <div class=" mt-3">
-                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </li>
-              <li class="wrap_card-map">
-                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
-                  <img src="img/bg_sign.svg" class="card-img-top img-card-menu" alt="...">
-                  <div class="card-body ">
-                    <h5 class="card-title title-limit">Card title</h5>
-                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="text-center m-1">                
-                      <div class=" mt-3">
-                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </li>
-              <li class="wrap_card-map">
-                <div class="card bg-5 text-clean p-0 mx-3" style="width: 18rem;">
-                  <img src="img/bg_sign.svg" class="card-img-top img-card-menu" alt="...">
-                  <div class="card-body ">
-                    <h5 class="card-title title-limit">Card title</h5>
-                    <p class="card-text card-limit my-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="text-center m-1">                
-                      <div class=" mt-3">
-                        <button type="submit" class="btn btn-primary btn-glass w-100">Sign in</button>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </li>
+              {{/each}}
             </ul>
             <i id="wrap-right" text-anchor="middle" class="bi-chevron-compact-right wrap-i"></i>            
           </div>

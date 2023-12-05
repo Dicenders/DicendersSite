@@ -16,7 +16,13 @@ fabric.Object.prototype.toObject = (function (toObject) {
       evented: this.evented,
       lock: this.lock,
       hoverCursor: this.hoverCursor,
-      id: this.id
+      id: this.id,
+      lockMovementX: this.lockMovementX,
+      lockMovementY: this.lockMovementY,
+      lockScalingX: this.lockScalingX,
+      lockScalingY: this.lockScalingY,
+      lockRotation: this.lockRotation,
+      lockUniScaling: this.lockUniScaling,
     });
   };
 })(fabric.Object.prototype.toObject);
